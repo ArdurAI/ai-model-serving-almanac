@@ -1,0 +1,343 @@
+{
+  "meta": {
+    "name": "Model Serving & Inference Engines Almanac Roster",
+    "version": "2026-06",
+    "generated_at": "2026-06-16T22:46:00Z",
+    "total_tools": 47,
+    "parent_almanac": "ArdurAI/ai-infrastructure-almanac",
+    "research_method": "8-facet wide exploration, 112+ independent searches, 8 parallel agents"
+  },
+  "category": "model-serving",
+  "category_name": "Model Serving & Inference Engines",
+  "tools": [
+    {
+      "name": "vLLM",
+      "type": "Inference Engine",
+      "license": "Apache-2.0",
+      "tier": "A",
+      "notes": "73.7K+ stars; PagedAttention; 200+ models; multi-GPU (NVIDIA, AMD, Intel, TPU)"
+    },
+    {
+      "name": "SGLang",
+      "type": "Inference Engine",
+      "license": "Apache-2.0",
+      "tier": "A",
+      "notes": "~20K+ stars; RadixAttention; 29% throughput advantage on RAG workloads"
+    },
+    {
+      "name": "TensorRT-LLM",
+      "type": "Inference Engine",
+      "license": "Apache-2.0 + closed",
+      "tier": "A",
+      "notes": "NVIDIA-backed; highest throughput; 30-60% faster than vLLM on H100; per-model compile"
+    },
+    {
+      "name": "llama.cpp",
+      "type": "Inference Engine",
+      "license": "MIT",
+      "tier": "A",
+      "notes": "100K+ stars; GGUF format; Metal/CUDA/Vulkan/ROCm; ARM, Raspberry Pi, WASM"
+    },
+    {
+      "name": "NVIDIA Dynamo",
+      "type": "Orchestration",
+      "license": "Open source",
+      "tier": "A",
+      "notes": "GTC 2026; disaggregated serving; KV-aware routing; 7x Blackwell boost; replaces Triton"
+    },
+    {
+      "name": "KServe",
+      "type": "K8s Model Serving",
+      "license": "Apache-2.0",
+      "tier": "A",
+      "notes": "CNCF Incubating; InferenceService CRD; scale-to-zero; canary; vLLM/TGI runtimes"
+    },
+    {
+      "name": "BentoML",
+      "type": "Model Serving",
+      "license": "Apache-2.0",
+      "tier": "A",
+      "notes": "Python-first packaging; BentoCloud hosted; multi-framework"
+    },
+    {
+      "name": "Ray Serve",
+      "type": "Distributed Serving",
+      "license": "Apache-2.0",
+      "tier": "A",
+      "notes": "Multi-model serving graphs; online RAG; integration with Ray training"
+    },
+    {
+      "name": "Ollama",
+      "type": "Local LLM Serving",
+      "license": "MIT",
+      "tier": "A",
+      "notes": "52M monthly downloads; on-premise; not for multi-tenant production (collapses under 5 concurrent)"
+    },
+    {
+      "name": "LMDeploy",
+      "type": "Inference Engine",
+      "license": "Apache-2.0",
+      "tier": "A",
+      "notes": "Shanghai AI Lab; TurboMind C++/CUDA; 1.5x vLLM on AWQ/MXFP4; DeepSeek/Qwen/InternLM"
+    },
+    {
+      "name": "TGI (Text Generation Inference)",
+      "type": "Inference Engine",
+      "license": "Apache-2.0",
+      "tier": "B",
+      "notes": "HuggingFace-backed; 800+ HF models; Rust HTTP server; maintenance mode as of late 2025"
+    },
+    {
+      "name": "DeepSpeed-MII",
+      "type": "Inference Engine",
+      "license": "Apache-2.0",
+      "tier": "B",
+      "notes": "Microsoft Research; Blocked KV caching; Dynamic SplitFuse; 37,000+ models"
+    },
+    {
+      "name": "Aphrodite Engine",
+      "type": "Inference Engine",
+      "license": "AGPL-3.0",
+      "tier": "B",
+      "notes": "PygmalionAI; vLLM fork; broadest quantization (FP2-FP12, EXL2, GGUF); creative/roleplay"
+    },
+    {
+      "name": "MLX",
+      "type": "ML Framework + Inference",
+      "license": "MIT",
+      "tier": "B",
+      "notes": "Apple; 24,600+ stars; unified memory; 4,255+ HF models; Apple Silicon only"
+    },
+    {
+      "name": "ExLlamaV2",
+      "type": "Inference Engine",
+      "license": "MIT",
+      "tier": "B",
+      "notes": "EXL2 quantization; 2-3x faster than GGUF on GPU; single-card focus"
+    },
+    {
+      "name": "CTranslate2",
+      "type": "Inference Engine",
+      "license": "MIT",
+      "tier": "B",
+      "notes": "OpenNMT; fast inference for Transformer models; C++ backend; Python bindings"
+    },
+    {
+      "name": "TensorRT Edge-LLM",
+      "type": "Edge Engine",
+      "license": "Proprietary",
+      "tier": "B",
+      "notes": "NVIDIA; C++ framework; EAGLE-3 speculative decoding; NVFP4; chunked prefill"
+    },
+    {
+      "name": "MindIE",
+      "type": "Inference Engine",
+      "license": "Proprietary",
+      "tier": "B",
+      "notes": "Huawei Ascend NPU专用; 闭源商业"
+    },
+    {
+      "name": "RTP-LLM",
+      "type": "Inference Engine",
+      "license": "Open source",
+      "tier": "B",
+      "notes": "Alibaba's internal serving engine; MoE and long-context optimizations"
+    },
+    {
+      "name": "NVIDIA Nim",
+      "type": "Containerized Serving",
+      "license": "Proprietary",
+      "tier": "B",
+      "notes": "Containerized product on TensorRT-LLM; NGC distribution"
+    },
+    {
+      "name": "Triton Inference Server",
+      "type": "General Inference Server",
+      "license": "Apache-2.0",
+      "tier": "B",
+      "notes": "NVIDIA; multi-framework (LLM + CV + tabular); being displaced by Dynamo for LLMs"
+    },
+    {
+      "name": "Seldon Core v2",
+      "type": "K8s Model Serving",
+      "license": "Apache-2.0",
+      "tier": "B",
+      "notes": "Multi-step pipelines; drift detection; MLServer multi-model per GPU"
+    },
+    {
+      "name": "llm-d",
+      "type": "Distributed Inference",
+      "license": "Open source",
+      "tier": "B",
+      "notes": "Community; multi-node, multi-GPU for 70B+; disaggregated serving; KV cache offloading"
+    },
+    {
+      "name": "KAITO",
+      "type": "K8s Operator",
+      "license": "Open source",
+      "tier": "B",
+      "notes": "Microsoft; AKS, K8s; automates GPU pool provisioning, model deployment, inference serving"
+    },
+    {
+      "name": "Kueue",
+      "type": "GPU Scheduling",
+      "license": "Apache-2.0",
+      "tier": "B",
+      "notes": "CNCF; multi-tenant GPU queueing; fair-share; preemption; GPU util 25-35% → 60-85%"
+    },
+    {
+      "name": "NVIDIA GPU Operator",
+      "type": "K8s GPU Management",
+      "license": "Proprietary",
+      "tier": "B",
+      "notes": "Automates drivers, MIG, time-slicing, DCGM monitoring"
+    },
+    {
+      "name": "TorchServe",
+      "type": "General Inference Server",
+      "license": "Apache-2.0",
+      "tier": "B",
+      "notes": "PyTorch/Amazon; PyTorch-native; less LLM-specific than vLLM"
+    },
+    {
+      "name": "TensorFlow Serving",
+      "type": "General Inference Server",
+      "license": "Apache-2.0",
+      "tier": "B",
+      "notes": "Google; TensorFlow-native; legacy for LLM workloads"
+    },
+    {
+      "name": "Fireworks AI",
+      "type": "Managed API",
+      "license": "Commercial",
+      "tier": "A",
+      "notes": "Per-token; FireAttention sub-100ms TTFT; low latency"
+    },
+    {
+      "name": "Together AI",
+      "type": "Managed API",
+      "license": "Commercial",
+      "tier": "A",
+      "notes": "Per-token; broad model catalog; fine-tuned deployment; research focus"
+    },
+    {
+      "name": "Replicate",
+      "type": "Managed API",
+      "license": "Commercial",
+      "tier": "B",
+      "notes": "Per-second billing; simple API; Cog container format; higher effective cost at volume"
+    },
+    {
+      "name": "Modal",
+      "type": "Serverless GPU",
+      "license": "Commercial",
+      "tier": "B",
+      "notes": "Per-GPU-second; fast cold starts; vLLM native; pay-per-second for spiky workloads"
+    },
+    {
+      "name": "Baseten",
+      "type": "Managed + Hybrid",
+      "license": "Commercial",
+      "tier": "B",
+      "notes": "Free tier → Enterprise; multi-cloud capacity; TensorRT/SGLang/vLLM/TGI runtimes"
+    },
+    {
+      "name": "Deep Infra",
+      "type": "Managed API",
+      "license": "Commercial",
+      "tier": "B",
+      "notes": "Low-cost inference; integrates with Dynamo"
+    },
+    {
+      "name": "RunPod",
+      "type": "GPU Cloud + Serverless",
+      "license": "Commercial",
+      "tier": "A",
+      "notes": "$0.34-2.69/hr; Pods + Serverless + Community Cloud; 30+ regions; cost leader"
+    },
+    {
+      "name": "Lambda Labs",
+      "type": "GPU Cloud",
+      "license": "Commercial",
+      "tier": "A",
+      "notes": "$3.78/hr H100 SXM; 99.9% SLA; 1-Click Clusters (16-2,000 GPUs); no egress fees"
+    },
+    {
+      "name": "Vast.ai",
+      "type": "P2P GPU Marketplace",
+      "license": "Commercial",
+      "tier": "B",
+      "notes": "~$0.90/hr H100 (interruptible); cheapest verified rates; 68+ GPU classes"
+    },
+    {
+      "name": "CoreWeave",
+      "type": "GPU Cloud",
+      "license": "Commercial",
+      "tier": "B",
+      "notes": "K8s-native; multi-region; NVIDIA partner; dedicated infra"
+    },
+    {
+      "name": "Nebius",
+      "type": "GPU Cloud",
+      "license": "Commercial",
+      "tier": "B",
+      "notes": "NVIDIA partner; Dynamo/TensorRT-LLM optimized"
+    },
+    {
+      "name": "Crusoe",
+      "type": "GPU Cloud",
+      "license": "Commercial",
+      "tier": "B",
+      "notes": "Flared-gas powered data centers; NVIDIA partner"
+    },
+    {
+      "name": "GMI Cloud",
+      "type": "GPU Cloud",
+      "license": "Commercial",
+      "tier": "B",
+      "notes": "H200 bare metal; 40% speed advantage over virtualized cloud"
+    },
+    {
+      "name": "LiteLLM",
+      "type": "LLM Gateway",
+      "license": "MIT",
+      "tier": "A",
+      "notes": "18K+ stars; 100+ providers; OpenAI-compatible proxy; YC W23"
+    },
+    {
+      "name": "Portkey",
+      "type": "AI Gateway",
+      "license": "Partially open",
+      "tier": "A",
+      "notes": "250+ models; 20-40ms latency; MCP Gateway; open source March 2026"
+    },
+    {
+      "name": "Bifrost",
+      "type": "AI Gateway",
+      "license": "Apache-2.0",
+      "tier": "B",
+      "notes": "Go; ~11μs overhead; virtual keys; RBAC; SSO; vault integration; MCP tool filtering"
+    },
+    {
+      "name": "TensorZero",
+      "type": "AI Gateway",
+      "license": "Open source",
+      "tier": "B",
+      "notes": "Rust; ~0.3ms; LLM gateway, observability, optimization, evaluations, experimentation"
+    },
+    {
+      "name": "ExecuTorch",
+      "type": "Edge Runtime",
+      "license": "Open source",
+      "tier": "B",
+      "notes": "Meta; 1.0 GA Oct 2025; 50KB footprint; 12+ hardware backends; billions of users"
+    },
+    {
+      "name": "MLC-LLM",
+      "type": "Edge Runtime",
+      "license": "Open source",
+      "tier": "C",
+      "notes": "On-device deployment; fragmented; Ollama emerged as winner in this niche"
+    }
+  ]
+}
