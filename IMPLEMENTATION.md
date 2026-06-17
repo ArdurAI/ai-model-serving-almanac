@@ -27,7 +27,18 @@ ai-model-serving-almanac/
 ├── CONTRIBUTING.md                    # How to contribute
 ├── architecture.md                    # Serving stack architecture + test philosophy
 ├── SETUP.md                           # How to push to GitHub
+├── smoke_gate.md                      # Smoke gate process documentation
+├── smoke_gate.py                      # Unified smoke gate runner script
 ├── .gitignore
+│
+├── adapters/                          # Benchmark adapter implementations
+│   ├── __init__.py                    # ModelServingAdapter base contract
+│   ├── llmperf_adapter.py             # OpenAI-compatible adapter (LLMPerf)
+│   ├── anyscale_adapter.py            # Sustained throughput adapter
+│   ├── custom_adapter.py              # Base for non-OpenAI engines
+│   ├── vllm_adapter.py              # Concrete vLLM adapter + smoke gate
+│   ├── sglang_adapter.py            # Concrete SGLang adapter + smoke gate
+│   └── ollama_adapter.py            # Concrete Ollama adapter + smoke gate
 │
 ├── editions/                          # Monthly editions
 │   └── 2026-06.md                   # Founding edition
@@ -44,11 +55,14 @@ ai-model-serving-almanac/
 ├── data/
 │   └── roster.json                  # Machine-readable catalog (47+ engines)
 │
-├── tools/                             # Per-engine deep-dive pages (placeholder)
+├── tools/                             # Per-engine deep-dive pages
 │   └── (populated as deep-dives are written)
 │       ├── vllm.md
 │       ├── sglang.md
 │       └── ...
+│
+├── scripts/                           # Automation scripts
+│   └── enrich_roster.py             # Roster enrichment from research data
 │
 └── assets/                            # Charts, diagrams, GPU telemetry screenshots
     └── (populated by editions)

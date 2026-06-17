@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "benchmark_suite": "smoke",
+    "engine_name": "vllm",
+    "engine_version": "0.6.0",
+    "run_date": "2026-06-16T14:30:00Z",
+    "hardware": "A100-80GB",
+    "gpu_count": 1,
+    "cuda_version": "12.4",
+    "pytorch_version": "2.3.0",
+    "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "model_checkpoint_sha256": "placeholder",
+    "adapter_commit": "placeholder",
+    "harness_commit": "placeholder",
+    "judge_model": "N/A",
+    "judge_prompt_sha256": "N/A"
+  },
+  "config": {
+    "batching_config": {},
+    "quantization": "fp16",
+    "concurrency_levels": [1],
+    "prompt_lengths": ["short"],
+    "max_tokens": 256,
+    "temperature": 0.0,
+    "seed": 42
+  },
+  "results": {
+    "ttft": { "p50": 0.0, "p95": 0.0, "p99": 0.0, "unit": "ms" },
+    "tpot": { "p50": 0.0, "p95": 0.0, "p99": 0.0, "unit": "ms" },
+    "throughput": { "tokens_per_sec": 0.0, "requests_per_sec": 0.0 },
+    "gpu_utilization": { "mean": 0.0, "peak": 0.0, "unit": "%" },
+    "gpu_memory": { "peak_mb": 0, "steady_mb": 0 },
+    "error_rate": 0.0,
+    "total_requests": 0,
+    "total_tokens": 0
+  },
+  "per_request": [],
+  "ops_notes": {
+    "setup_time_sec": 0,
+    "dependency_conflicts": 0,
+    "undocumented_steps": 0,
+    "cuda_version_mismatch": false,
+    "model_conversion_required": false,
+    "model_conversion_time_sec": 0,
+    "status": "placeholder — no real benchmark run yet"
+  }
+}
