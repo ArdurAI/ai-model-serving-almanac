@@ -215,6 +215,61 @@ API key: generate at https://api.together.ai/settings/api-keys
 | 2026-06-16 | First triaged | Added to roster, deep-dive template created |
 | 2026-06-17 | Research enriched | Official links, setup commands, sharp edges populated from community research |
 
+
+---
+
+## Deep Analysis
+
+### 1. How Is This Tool Useful?
+
+Together AI is a managed inference platform offering per-token pricing for 200+ open-source models, fine-tuned model deployment, and a broad research-focused model catalog. The company has raised $225M+ in funding and is known for its contributions to open-source AI research (RedPajama, OpenChat, etc.). Together AI provides both serverless APIs and dedicated endpoints.
+
+### 2. Gotchas of Using This Tool
+
+Together AI is a closed-source commercial platform — no self-hosting. Per-token pricing at scale is more expensive than self-serving on Lambda Labs or RunPod. Fine-tuned model hosting requires their enterprise tier. The togethercomputer GitHub org has limited public repos (the Python client has only 81 stars).
+
+### 3. Limitations
+
+Limited to US-based inference. Custom model hosting beyond their catalog requires enterprise engagement. No GPU passthrough or raw compute options — it's API-only. Rate limits on lower tiers can affect production workloads during peak demand.
+
+### 4. How Secure Is This Tool?
+
+Together AI is SOC 2 Type II compliant with enterprise security features including SSO, data isolation, and audit logging. Customer data is not used for training. The platform provides data residency options for enterprise customers.
+
+### 5. Usefulness to General Public and Non-Technical Users
+
+**Rating: 6/10**
+
+Together AI uniquely combines a managed inference platform with active AI research — they contribute to open-source models (RedPajama, OpenChat) and publish research papers. For teams that want their inference provider to also advance the open-source ecosystem, Together AI is a natural choice.
+
+### 6. What Does This Tool Solve That Others Don't?
+
+Together AI uniquely combines a managed inference platform with active AI research — they contribute to open-source models (RedPajama, OpenChat) and publish research papers. For teams that want their inference provider to also advance the open-source ecosystem, Together AI is a natural choice.
+
+### 7. How Does This Tool Rank Compared to Others?
+
+| Rank | Tool | Stars | Key Advantage |
+|------|------|-------|---------------|
+| 1 | vLLM | 85K+ | Largest community, broadest hardware support |
+| 2 | SGLang | 30K | RadixAttention, best for RAG workloads |
+| 3 | TensorRT-LLM | 14K | Highest single-GPU throughput on NVIDIA |
+| 4 | llama.cpp | 119K | Best for CPU/consumer hardware |
+| 5 | Ollama | 175K | Easiest local deployment |
+
+*See [tools/README.md](README.md) for the full ranking table.*
+
+### 8. How Can This Tool Be Improved? How Active Is Development?
+
+Together AI is well-funded and actively developed with regular model additions. Improvement areas include transparent pricing, self-hosted options, international regions, more flexible custom model support, and open benchmarking data.
+
+### 9. Official Maintainer Contacts
+
+Together Computer Inc. — contact via their website together.ai, API support channels, or enterprise sales. The company is backed by Sequoia, Kleiner Perkins, and others.
+
+### 10. General Usage Guidance
+
+Best for managed inference of open-source models with per-token pricing. Compare with Fireworks AI (latency focus) and DeepInfra (cost focus). Use Together AI if you value their research contributions and model catalog breadth.
+
 ---
 
 ## License

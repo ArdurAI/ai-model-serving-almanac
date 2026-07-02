@@ -225,6 +225,61 @@ lmdeploy serve gradio internlm/internlm-chat-7b
 | 2026-06-16 | First triaged | Added to roster, deep-dive template created |
 | 2026-06-17 | Research enriched | Official links, setup commands, sharp edges populated from community research |
 
+
+---
+
+## Deep Analysis
+
+### 1. How Is This Tool Useful?
+
+LMDeploy is a high-performance LLM deployment toolkit from Shanghai AI Lab, featuring the TurboMind C++/CUDA inference engine that achieves 1.5x vLLM throughput on AWQ/MXFP4 quantized models. It provides model compression, serving, and pipeline tools with excellent support for Chinese LLMs (InternLM, Qwen, DeepSeek). The project is a top choice for teams deploying Chinese open-source models.
+
+### 2. Gotchas of Using This Tool
+
+LMDeploy has 597 open issues and 4 published security advisories. The TurboMind engine is tightly coupled to specific model architectures — support for new models requires manual integration. Documentation is primarily in Chinese, creating a language barrier for international users. The project is less well-known outside the Chinese AI ecosystem.
+
+### 3. Limitations
+
+TurboMind's per-model optimization means new model architectures may not be immediately supported. International community and documentation are limited compared to vLLM or SGLang. Some advanced features (W4A16, KV cache quantization) require specific hardware configurations.
+
+### 4. How Secure Is This Tool?
+
+4 published GitHub security advisories indicate some security maintenance. Apache-2.0 license is business-friendly. The project is developed in China, which may raise data sovereignty concerns for some organizations — though the code itself is open-source and auditable.
+
+### 5. Usefulness to General Public and Non-Technical Users
+
+**Rating: 4/10**
+
+LMDeploy's TurboMind engine uniquely achieves 1.5x vLLM throughput on AWQ and MXFP4 quantized models through optimized CUDA kernels. For teams heavily invested in AWQ quantization (common in the Chinese AI ecosystem), this provides a meaningful performance advantage. Its tight integration with InternLM models is also unique.
+
+### 6. What Does This Tool Solve That Others Don't?
+
+LMDeploy's TurboMind engine uniquely achieves 1.5x vLLM throughput on AWQ and MXFP4 quantized models through optimized CUDA kernels. For teams heavily invested in AWQ quantization (common in the Chinese AI ecosystem), this provides a meaningful performance advantage. Its tight integration with InternLM models is also unique.
+
+### 7. How Does This Tool Rank Compared to Others?
+
+| Rank | Tool | Stars | Key Advantage |
+|------|------|-------|---------------|
+| 1 | vLLM | 85K+ | Largest community, broadest hardware support |
+| 2 | SGLang | 30K | RadixAttention, best for RAG workloads |
+| 3 | TensorRT-LLM | 14K | Highest single-GPU throughput on NVIDIA |
+| 4 | llama.cpp | 119K | Best for CPU/consumer hardware |
+| 5 | Ollama | 175K | Easiest local deployment |
+
+*See [tools/README.md](README.md) for the full ranking table.*
+
+### 8. How Can This Tool Be Improved? How Active Is Development?
+
+Development is active (pushed July 2026) with 701 forks. Improvement areas include English documentation, broader model architecture support, international community building, and reducing the issue backlog. Better integration with Western model formats would expand adoption.
+
+### 9. Official Maintainer Contacts
+
+Maintained by Shanghai AI Laboratory (InternLM team). Contact via GitHub Issues at InternLM/lmdeploy or their community channels. The project is part of the OpenInternLM ecosystem.
+
+### 10. General Usage Guidance
+
+Best for deploying Chinese LLMs (InternLM, Qwen, DeepSeek) with AWQ quantization. Compare with vLLM for broader model support and SGLang for RAG workloads. For international teams, be prepared for Chinese-language documentation and community.
+
 ---
 
 ## License

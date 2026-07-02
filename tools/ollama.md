@@ -233,6 +233,61 @@ python -c "import ollama; print(ollama.chat(model='gemma4', messages=[{'role': '
 | 2026-06-16 | First triaged | Added to roster, deep-dive template created |
 | 2026-06-17 | Research enriched | Official links, setup commands, sharp edges populated from community research |
 
+
+---
+
+## Deep Analysis
+
+### 1. How Is This Tool Useful?
+
+Ollama is the most popular local LLM runtime with 175K+ GitHub stars and 52M+ monthly downloads, providing the simplest way to run LLMs locally on macOS, Linux, and Windows. It wraps llama.cpp with a beautiful CLI and REST API, supports model pulling from a registry, and runs models with a single command (`ollama run llama3`). Ollama has become the standard for local AI development and prototyping.
+
+### 2. Gotchas of Using This Tool
+
+Ollama has 3,466 open issues — very high, reflecting the massive user base and diverse hardware configurations. The runtime collapses under concurrent load (5+ simultaneous requests) — it's designed for single-user local use, not multi-tenant production serving. No continuous batching means throughput is limited for concurrent requests.
+
+### 3. Limitations
+
+Not suitable for production multi-user serving — use vLLM, SGLang, or TGI instead. GPU memory management is opaque (users can't fine-tune memory allocation like vLLM's `--gpu-memory-utilization`). No multi-GPU tensor parallelism for large models. Model format is proprietary Modelfile (though based on GGUF).
+
+### 4. How Secure Is This Tool?
+
+No published GitHub security advisories despite 175K+ stars — either very secure or under-reported. The REST API server (when enabled) should not be exposed to the internet without authentication. Models are pulled from Ollama's registry — verify model integrity. MIT license is business-friendly.
+
+### 5. Usefulness to General Public and Non-Technical Users
+
+**Rating: 8/10**
+
+Ollama uniquely provides zero-friction local LLM execution — `ollama run llama3` works on any platform with one command, no configuration, no GPU setup. For non-technical users, it's the only tool that makes local LLM running approachable. This simplicity has driven its massive adoption.
+
+### 6. What Does This Tool Solve That Others Don't?
+
+Ollama uniquely provides zero-friction local LLM execution — `ollama run llama3` works on any platform with one command, no configuration, no GPU setup. For non-technical users, it's the only tool that makes local LLM running approachable. This simplicity has driven its massive adoption.
+
+### 7. How Does This Tool Rank Compared to Others?
+
+| Rank | Tool | Stars | Key Advantage |
+|------|------|-------|---------------|
+| 1 | vLLM | 85K+ | Largest community, broadest hardware support |
+| 2 | SGLang | 30K | RadixAttention, best for RAG workloads |
+| 3 | TensorRT-LLM | 14K | Highest single-GPU throughput on NVIDIA |
+| 4 | llama.cpp | 119K | Best for CPU/consumer hardware |
+| 5 | Ollama | 175K | Easiest local deployment |
+
+*See [tools/README.md](README.md) for the full ranking table.*
+
+### 8. How Can This Tool Be Improved? How Active Is Development?
+
+Development is extremely active (pushed July 2026) with 16,798 forks. Improvement areas include concurrent request handling, multi-GPU support, better memory management controls, model provenance/verification, and a path from local prototyping to production serving.
+
+### 9. Official Maintainer Contacts
+
+Maintained by Ollama Inc. Contact via GitHub Issues at ollama/ollama, their Discord community, or email hello@ollama.com. The company is venture-backed.
+
+### 10. General Usage Guidance
+
+Best for local LLM development and prototyping. For production serving, use vLLM or SGLang. Start with `ollama run llama3.1` and explore the model library at ollama.com/library. Pair with Open WebUI for a ChatGPT-like interface.
+
 ---
 
 ## License

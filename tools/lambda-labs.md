@@ -209,6 +209,61 @@ Account + API key: https://cloud.lambda.ai → Add payment method → Generate A
 | 2026-06-16 | First triaged | Added to roster, deep-dive template created |
 | 2026-06-17 | Research enriched | Official links, setup commands, sharp edges populated from community research |
 
+
+---
+
+## Deep Analysis
+
+### 1. How Is This Tool Useful?
+
+Lambda Labs offers GPU cloud instances at industry-leading prices ($3.78/hr for H100 SXM) with transparent pricing, no egress fees, and a 99.9% SLA. Their 1-Click Clusters can provision 16-2,000 GPUs for distributed training and inference. Lambda is the simplest and most cost-effective way to get raw GPU compute for AI workloads.
+
+### 2. Gotchas of Using This Tool
+
+GPU availability can be limited — H100s and H200s are often sold out or have long wait times. Lambda offers only bare-metal instances (no managed services, no auto-scaling, no serverless). The platform is US-only, limiting options for international data residency requirements.
+
+### 3. Limitations
+
+No managed services — you get a GPU instance and must set up everything else (serving framework, monitoring, load balancing). No spot/preemptible instances for cost savings. The product is infrastructure-only — no model serving APIs, no fine-tuning APIs, just raw GPUs.
+
+### 4. How Secure Is This Tool?
+
+Lambda provides standard cloud security including SSH key management, VPC networking, and firewall rules. SOC 2 compliance status should be verified. Security maturity is less documented than AWS or GCP. Data is encrypted at rest and in transit.
+
+### 5. Usefulness to General Public and Non-Technical Users
+
+**Rating: 4/10**
+
+Lambda Labs' key differentiator is transparent, no-nonsense pricing — $3.78/hr for H100 SXM is one of the lowest rates available, with no hidden egress fees or complex pricing tiers. The 1-Click Clusters feature makes provisioning large GPU clusters (up to 2,000 GPUs) trivially easy, which is unique.
+
+### 6. What Does This Tool Solve That Others Don't?
+
+Lambda Labs' key differentiator is transparent, no-nonsense pricing — $3.78/hr for H100 SXM is one of the lowest rates available, with no hidden egress fees or complex pricing tiers. The 1-Click Clusters feature makes provisioning large GPU clusters (up to 2,000 GPUs) trivially easy, which is unique.
+
+### 7. How Does This Tool Rank Compared to Others?
+
+| Rank | Tool | Stars | Key Advantage |
+|------|------|-------|---------------|
+| 1 | vLLM | 85K+ | Largest community, broadest hardware support |
+| 2 | SGLang | 30K | RadixAttention, best for RAG workloads |
+| 3 | TensorRT-LLM | 14K | Highest single-GPU throughput on NVIDIA |
+| 4 | llama.cpp | 119K | Best for CPU/consumer hardware |
+| 5 | Ollama | 175K | Easiest local deployment |
+
+*See [tools/README.md](README.md) for the full ranking table.*
+
+### 8. How Can This Tool Be Improved? How Active Is Development?
+
+Lambda is expanding rapidly with significant funding. Improvement areas include managed services (serving, monitoring), spot instances, international regions, auto-scaling, and a richer API. GPU availability remains the biggest customer pain point.
+
+### 9. Official Maintainer Contacts
+
+Lambda Inc. — contact via lambdalabs.com, support@lambdalabs.com, or their community Discord. The company is backed by Gradient Ventures, Google's AI fund.
+
+### 10. General Usage Guidance
+
+Best for teams that want raw GPU compute at the lowest prices and can manage their own serving infrastructure. Compare with RunPod (serverless option, community cloud) and CoreWeave (Kubernetes-native). Use vLLM or SGLang on Lambda instances for self-managed LLM serving.
+
 ---
 
 ## License

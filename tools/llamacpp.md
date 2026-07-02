@@ -241,6 +241,61 @@ llama-server -hf ggml-org/gemma-3-1b-it-GGUF --port 8080
 | 2026-06-16 | First triaged | Added to roster, deep-dive template created |
 | 2026-06-17 | Research enriched | Official links, setup commands, sharp edges populated from community research |
 
+
+---
+
+## Deep Analysis
+
+### 1. How Is This Tool Useful?
+
+llama.cpp is the most popular LLM inference engine by GitHub stars (119K+), providing C/C++ inference for GGUF-format models across CPU, GPU (CUDA, Metal, Vulkan, ROCm), and edge devices. It runs on everything from Raspberry Pi to multi-GPU servers and is the foundation for Ollama, LM Studio, and many other tools. The engine's broad hardware support and minimal dependencies make it the universal choice for local LLM inference.
+
+### 2. Gotchas of Using This Tool
+
+llama.cpp has 13 published security advisories — users must track CVEs. The GGUF format requires model conversion from safetensors/PyTorch. Performance tuning (thread count, batch size, GPU layers) requires experimentation for each hardware setup. The project moves fast with frequent breaking changes to the API and GGUF format.
+
+### 3. Limitations
+
+Not optimized for high-throughput multi-user serving — lacks continuous batching in the core library (though llama-server adds some concurrency support). Multi-GPU tensor parallelism is limited compared to vLLM or SGLang. The C/C++ codebase means extending it requires systems programming skills.
+
+### 4. How Secure Is This Tool?
+
+13 published GitHub security advisories indicate active security maintenance. Being a C/C++ project, memory safety is a concern — users should keep updated with the latest releases. The server mode exposes an API that should not be directly internet-facing without authentication.
+
+### 5. Usefulness to General Public and Non-Technical Users
+
+**Rating: 7/10**
+
+llama.cpp uniquely provides universal LLM inference across the widest range of hardware — from ARM microcontrollers to datacenter GPUs — with a single codebase. Its GGUF format has become the de facto standard for quantized model distribution. No other engine matches its hardware breadth and portability.
+
+### 6. What Does This Tool Solve That Others Don't?
+
+llama.cpp uniquely provides universal LLM inference across the widest range of hardware — from ARM microcontrollers to datacenter GPUs — with a single codebase. Its GGUF format has become the de facto standard for quantized model distribution. No other engine matches its hardware breadth and portability.
+
+### 7. How Does This Tool Rank Compared to Others?
+
+| Rank | Tool | Stars | Key Advantage |
+|------|------|-------|---------------|
+| 1 | vLLM | 85K+ | Largest community, broadest hardware support |
+| 2 | SGLang | 30K | RadixAttention, best for RAG workloads |
+| 3 | TensorRT-LLM | 14K | Highest single-GPU throughput on NVIDIA |
+| 4 | llama.cpp | 119K | Best for CPU/consumer hardware |
+| 5 | Ollama | 175K | Easiest local deployment |
+
+*See [tools/README.md](README.md) for the full ranking table.*
+
+### 8. How Can This Tool Be Improved? How Active Is Development?
+
+Development is extremely active (pushed July 2026) with 20,172 forks — one of the most actively developed open-source projects overall. Improvement areas include better multi-GPU support, continuous batching for serving, and stabilizing the GGUF format specification.
+
+### 9. Official Maintainer Contacts
+
+Maintained by Georgi Gerganov and a large community of contributors. Contact via GitHub Issues at ggml-org/llama.cpp or their IRC/Discord. The project is community-funded through GitHub Sponsors.
+
+### 10. General Usage Guidance
+
+Best for local LLM inference on any hardware. For production multi-user serving, wrap with Ollama or use vLLM/SGLang instead. Use GGUF Q4_K_M quantization for the best quality-speed tradeoff. Pair with a frontend like LM Studio or Text Generation WebUI for a GUI experience.
+
 ---
 
 ## License

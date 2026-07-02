@@ -240,6 +240,61 @@ EOF
 | 2026-06-16 | First triaged | Added to roster, deep-dive template created |
 | 2026-06-17 | Research enriched | Official links, setup commands, sharp edges populated from community research |
 
+
+---
+
+## Deep Analysis
+
+### 1. How Is This Tool Useful?
+
+NVIDIA Dynamo is a datacenter-scale distributed inference framework announced at GTC 2025/2026, designed to replace Triton Inference Server as NVIDIA's recommended LLM serving platform. It implements disaggregated serving (separating prefill from decode), KV-aware routing, and claims 7x throughput improvements on Blackwell GPUs. Dynamo supports multiple backend engines (TensorRT-LLM, vLLM, SGLang) and is rapidly becoming the standard for large-scale NVIDIA inference.
+
+### 2. Gotchas of Using This Tool
+
+Dynamo has 781 open issues, reflecting its ambitious scope and rapid development. The project is very new (announced 2025) — production deployments are still early-stage. The architecture (Rust-based microservices) requires understanding of distributed systems. Documentation for advanced configurations is still evolving.
+
+### 3. Limitations
+
+Optimized for NVIDIA GPUs only — no AMD or Intel support. The disaggregated serving architecture adds complexity that benefits large-scale deployments but may be overkill for smaller setups. Being new, it lacks the battle-tested maturity of vLLM or Triton.
+
+### 4. How Secure Is This Tool?
+
+No published security advisories yet, but the project is new. As an NVIDIA project, it follows NVIDIA's security practices. The Rust core provides memory safety advantages. The microservice architecture requires careful network security configuration.
+
+### 5. Usefulness to General Public and Non-Technical Users
+
+**Rating: 3/10**
+
+Dynamo uniquely implements KV-aware routing — routing requests to the GPU that already has the relevant KV cache, avoiding recomputation. Combined with disaggregated serving, this provides dramatic throughput improvements for large-scale multi-GPU deployments. The 7x Blackwell claim, if accurate, represents a generational leap.
+
+### 6. What Does This Tool Solve That Others Don't?
+
+Dynamo uniquely implements KV-aware routing — routing requests to the GPU that already has the relevant KV cache, avoiding recomputation. Combined with disaggregated serving, this provides dramatic throughput improvements for large-scale multi-GPU deployments. The 7x Blackwell claim, if accurate, represents a generational leap.
+
+### 7. How Does This Tool Rank Compared to Others?
+
+| Rank | Tool | Stars | Key Advantage |
+|------|------|-------|---------------|
+| 1 | vLLM | 85K+ | Largest community, broadest hardware support |
+| 2 | SGLang | 30K | RadixAttention, best for RAG workloads |
+| 3 | TensorRT-LLM | 14K | Highest single-GPU throughput on NVIDIA |
+| 4 | llama.cpp | 119K | Best for CPU/consumer hardware |
+| 5 | Ollama | 175K | Easiest local deployment |
+
+*See [tools/README.md](README.md) for the full ranking table.*
+
+### 8. How Can This Tool Be Improved? How Active Is Development?
+
+Development is extremely active (pushed July 2026) with 1,298 forks — one of the fastest-growing projects in this category. Improvement areas include reducing complexity, better documentation, stabilizing APIs, broader backend engine support, and production hardening.
+
+### 9. Official Maintainer Contacts
+
+Maintained by NVIDIA (AI Dynamics team). Contact via GitHub Issues at ai-dynamo/dynamo or NVIDIA developer forums. The project is open-source under NVIDIA's governance.
+
+### 10. General Usage Guidance
+
+Best for large-scale NVIDIA GPU deployments that need maximum throughput. It's positioned as the successor to Triton Inference Server for LLM workloads. For smaller deployments, vLLM or SGLang are simpler. Start with the Dynamo Cloud-in-a-Box examples.
+
 ---
 
 ## License

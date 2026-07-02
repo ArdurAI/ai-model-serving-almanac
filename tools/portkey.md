@@ -237,6 +237,61 @@ API key: create at https://app.portkey.ai → API Keys
 | 2026-06-16 | First triaged | Added to roster, deep-dive template created |
 | 2026-06-17 | Research enriched | Official links, setup commands, sharp edges populated from community research |
 
+
+---
+
+## Deep Analysis
+
+### 1. How Is This Tool Useful?
+
+Portkey is an AI gateway providing routing to 1,600+ LLMs and AI models with 20-40ms latency overhead, integrated guardrails (50+ types), caching, retries, and observability. The gateway went open-source (MIT) in March 2026 and provides a MCP Gateway for controlling AI agent tool access. Portkey competes with LiteLLM as a production AI gateway.
+
+### 2. Gotchas of Using This Tool
+
+Portkey has 210 open issues and 1 published security advisory. The open-source gateway is newer than LiteLLM (which has 52K+ stars vs Portkey's 12K) — smaller community means less community-contributed integrations. The full-featured commercial product requires a paid subscription. TypeScript/Node.js implementation may be a concern for teams wanting Python-native tooling.
+
+### 3. Limitations
+
+The open-source gateway lacks some features of the commercial Portkey platform (advanced analytics, team management, compliance features). TypeScript implementation means it's less natural for Python-centric ML teams. The 1,600+ model count includes many regional/niche providers with varying reliability.
+
+### 4. How Secure Is This Tool?
+
+1 published GitHub security advisory. MIT license for the gateway. The commercial platform is SOC 2 Type II compliant with SSO, RBAC, and audit logging. API key management is a critical security concern — the gateway holds keys for all upstream providers.
+
+### 5. Usefulness to General Public and Non-Technical Users
+
+**Rating: 5/10**
+
+Portkey uniquely combines a gateway with 50+ integrated guardrails (prompt injection detection, PII redaction, toxicity filtering) and MCP tool filtering for AI agents. The MCP Gateway feature — controlling which tools AI agents can invoke — is a differentiator for enterprise agentic AI deployments.
+
+### 6. What Does This Tool Solve That Others Don't?
+
+Portkey uniquely combines a gateway with 50+ integrated guardrails (prompt injection detection, PII redaction, toxicity filtering) and MCP tool filtering for AI agents. The MCP Gateway feature — controlling which tools AI agents can invoke — is a differentiator for enterprise agentic AI deployments.
+
+### 7. How Does This Tool Rank Compared to Others?
+
+| Rank | Tool | Stars | Key Advantage |
+|------|------|-------|---------------|
+| 1 | vLLM | 85K+ | Largest community, broadest hardware support |
+| 2 | SGLang | 30K | RadixAttention, best for RAG workloads |
+| 3 | TensorRT-LLM | 14K | Highest single-GPU throughput on NVIDIA |
+| 4 | llama.cpp | 119K | Best for CPU/consumer hardware |
+| 5 | Ollama | 175K | Easiest local deployment |
+
+*See [tools/README.md](README.md) for the full ranking table.*
+
+### 8. How Can This Tool Be Improved? How Active Is Development?
+
+Development is active (pushed May 2026) with 1,171 forks. The open-sourcing in March 2026 is accelerating community growth. Improvement areas include catching up to LiteLLM's provider coverage, Python SDK quality, documentation, and performance benchmarks.
+
+### 9. Official Maintainer Contacts
+
+Maintained by Portkey.ai Inc. Contact via GitHub Issues at Portkey-AI/gateway, their Discord, or support@portkey.ai. Enterprise sales through portkey.ai.
+
+### 10. General Usage Guidance
+
+Best as a production AI gateway with built-in guardrails. Compare with LiteLLM (larger community, more providers) and TensorZero (Rust-based, observability-focused). Use Portkey if you need integrated guardrails and MCP tool filtering.
+
 ---
 
 ## License

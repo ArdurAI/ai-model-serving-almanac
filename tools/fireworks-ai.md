@@ -218,6 +218,61 @@ API key: generate at https://fireworks.ai/account/api-keys
 | 2026-06-16 | First triaged | Added to roster, deep-dive template created |
 | 2026-06-17 | Research enriched | Official links, setup commands, sharp edges populated from community research |
 
+
+---
+
+## Deep Analysis
+
+### 1. How Is This Tool Useful?
+
+Fireworks AI is a managed inference platform known for its FireAttention technology achieving sub-100ms time-to-first-token (TTFT) on large models. It offers per-token pricing, a broad model catalog, and fine-tuning APIs. The platform is backed by $570M+ in funding (Sequoia, Andreessen Horowitz) and is valued at $3B+.
+
+### 2. Gotchas of Using This Tool
+
+Fireworks is a closed-source commercial platform with no self-hosting option. Per-token pricing can become expensive at scale compared to renting GPUs and self-serving. The platform's performance claims (FireAttention, sub-100ms TTFT) are difficult to independently verify.
+
+### 3. Limitations
+
+Limited to US-based inference regions. Custom model hosting requires engaging Fireworks' team — you can't bring arbitrary custom architectures. The fine-tuning API supports LoRA but full fine-tuning requires enterprise engagement.
+
+### 4. How Secure Is This Tool?
+
+Fireworks AI is SOC 2 Type II compliant and offers enterprise security features including SSO, data isolation, and audit logging. Customer data and model weights are not used for training. The platform provides data residency guarantees for enterprise customers.
+
+### 5. Usefulness to General Public and Non-Technical Users
+
+**Rating: 6/10**
+
+Fireworks' key differentiator is FireAttention, a proprietary attention implementation that delivers industry-leading latency (sub-100ms TTFT) for large models. This makes it the platform of choice for real-time, user-facing applications where latency is critical — voice assistants, coding assistants, and chatbots.
+
+### 6. What Does This Tool Solve That Others Don't?
+
+Fireworks' key differentiator is FireAttention, a proprietary attention implementation that delivers industry-leading latency (sub-100ms TTFT) for large models. This makes it the platform of choice for real-time, user-facing applications where latency is critical — voice assistants, coding assistants, and chatbots.
+
+### 7. How Does This Tool Rank Compared to Others?
+
+| Rank | Tool | Stars | Key Advantage |
+|------|------|-------|---------------|
+| 1 | vLLM | 85K+ | Largest community, broadest hardware support |
+| 2 | SGLang | 30K | RadixAttention, best for RAG workloads |
+| 3 | TensorRT-LLM | 14K | Highest single-GPU throughput on NVIDIA |
+| 4 | llama.cpp | 119K | Best for CPU/consumer hardware |
+| 5 | Ollama | 175K | Easiest local deployment |
+
+*See [tools/README.md](README.md) for the full ranking table.*
+
+### 8. How Can This Tool Be Improved? How Active Is Development?
+
+Fireworks is well-funded and actively developed with regular model additions. Improvement areas include transparent benchmark data, self-hosted options, international regions, and more flexible custom model support. The platform should publish FireAttention performance comparisons.
+
+### 9. Official Maintainer Contacts
+
+Fireworks AI Inc. — contact via their website fireworks.ai, support channels, or enterprise sales. Valued at $3B+, backed by Sequoia, a16z, and others.
+
+### 10. General Usage Guidance
+
+Best for latency-critical, user-facing applications that need sub-100ms TTFT. Compare with Together AI for model catalog breadth, and with self-served vLLM on Lambda Labs for cost optimization. Use the free tier to benchmark latency for your specific models.
+
 ---
 
 ## License
