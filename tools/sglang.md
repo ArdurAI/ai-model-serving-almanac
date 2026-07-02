@@ -233,6 +233,61 @@ docker run --gpus all \
 | 2026-06-16 | First triaged | Added to roster, deep-dive template created |
 | 2026-06-17 | Research enriched | Official links, setup commands, sharp edges populated from community research |
 
+
+---
+
+## Deep Analysis
+
+### 1. How Is This Tool Useful?
+
+SGLang is a high-performance LLM serving framework featuring RadixAttention (automatic prefix caching via radix tree), which provides up to 29% throughput advantage on RAG workloads with shared system prompts. It supports 200+ model architectures, constrained decoding (JSON/regex), multi-modal models, and speculative decoding. SGLang has rapidly grown to 30K+ stars and is considered the second-most-popular LLM engine after vLLM.
+
+### 2. Gotchas of Using This Tool
+
+SGLang has 3,880 open issues — very high, reflecting rapid growth and broad feature development. RadixAttention benefits depend on workload characteristics — pure single-turn workloads see minimal benefit. The project moves fast with frequent API changes. Documentation sometimes lags behind features.
+
+### 3. Limitations
+
+While SGLang supports many models, vLLM still has broader hardware support (TPU, Intel Gaudi). RadixAttention's cache management can lead to unexpected memory usage patterns. The project's rapid growth means some features are less battle-tested than vLLM's equivalents.
+
+### 4. How Secure Is This Tool?
+
+No published GitHub security advisories. Apache-2.0 license. The project is relatively young, so security maturity is still developing. Constrained decoding features (JSON/regex) could have edge cases that lead to unexpected behavior.
+
+### 5. Usefulness to General Public and Non-Technical Users
+
+**Rating: 5/10**
+
+SGLang's RadixAttention is a unique innovation — automatic prefix caching using a radix tree data structure that eliminates redundant computation for shared prefixes (common system prompts, few-shot examples). For RAG workloads where many requests share context, this provides up to 29% throughput improvement that no other engine matches.
+
+### 6. What Does This Tool Solve That Others Don't?
+
+SGLang's RadixAttention is a unique innovation — automatic prefix caching using a radix tree data structure that eliminates redundant computation for shared prefixes (common system prompts, few-shot examples). For RAG workloads where many requests share context, this provides up to 29% throughput improvement that no other engine matches.
+
+### 7. How Does This Tool Rank Compared to Others?
+
+| Rank | Tool | Stars | Key Advantage |
+|------|------|-------|---------------|
+| 1 | vLLM | 85K+ | Largest community, broadest hardware support |
+| 2 | SGLang | 30K | RadixAttention, best for RAG workloads |
+| 3 | TensorRT-LLM | 14K | Highest single-GPU throughput on NVIDIA |
+| 4 | llama.cpp | 119K | Best for CPU/consumer hardware |
+| 5 | Ollama | 175K | Easiest local deployment |
+
+*See [tools/README.md](README.md) for the full ranking table.*
+
+### 8. How Can This Tool Be Improved? How Active Is Development?
+
+Development is extremely active (pushed July 2026) with 6,882 forks — one of the fastest-growing AI projects. Improvement areas include reducing the issue backlog, stabilizing APIs, broader hardware support, better documentation, and production hardening.
+
+### 9. Official Maintainer Contacts
+
+Maintained by the SGL Project (originated from LMSYS/UC Berkeley). Contact via GitHub Issues at sgl-project/sglang or their Discord. Core contributors include researchers from LMSYS Org and UC Berkeley.
+
+### 10. General Usage Guidance
+
+Best for RAG workloads and any serving scenario with shared prefixes (system prompts, few-shot examples). Compare with vLLM (broader hardware support) and TensorRT-LLM (higher single-GPU throughput on NVIDIA). Use SGLang's structured output (JSON mode) for reliable tool use.
+
 ---
 
 ## License

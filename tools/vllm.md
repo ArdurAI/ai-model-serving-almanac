@@ -223,6 +223,61 @@ outputs = llm.generate(["Hello world"], params)
 | 2026-06-16 | First triaged | Added to roster, deep-dive template created |
 | 2026-06-17 | Research enriched | Official links, setup commands, sharp edges populated from community research |
 
+
+---
+
+## Deep Analysis
+
+### 1. How Is This Tool Useful?
+
+vLLM is the dominant open-source LLM inference engine with 85K+ GitHub stars, featuring PagedAttention (virtual memory for KV cache), continuous batching, and support for 200+ model architectures across NVIDIA, AMD, Intel, and TPU hardware. It has become the de facto standard for LLM serving, powering inference at companies like Anthropic, Cohere, and many others. The OpenAI-compatible server makes deployment trivial.
+
+### 2. Gotchas of Using This Tool
+
+vLLM has 5,521 open issues — the highest raw count in the ecosystem, reflecting its massive user base and complex multi-hardware support. 30 published security advisories mean production deployments must track CVEs carefully. GPU memory leaks in model forward passes can occur with repeated batch inference. OOM during sampler warmup with large MoE models requires careful memory tuning.
+
+### 3. Limitations
+
+Not the fastest on single-GPU NVIDIA (TensorRT-LLM is 30-60% faster). Memory management can be unpredictable with large models. Multi-GPU tensor parallelism requires careful configuration. AMD/Intel/TPU support lags behind NVIDIA in both features and performance. The project's rapid growth means some features are less tested.
+
+### 4. How Secure Is This Tool?
+
+30 published GitHub security advisories — the highest in this category, indicating both active security maintenance and a large attack surface. The project participates in responsible disclosure and publishes CVE fixes regularly. Production deployments should pin to stable versions and monitor for security advisories. The OpenAI-compatible server should be secured with authentication.
+
+### 5. Usefulness to General Public and Non-Technical Users
+
+**Rating: 5/10**
+
+vLLM pioneered PagedAttention — treating KV cache like virtual memory with page-based allocation — which eliminated the memory fragmentation that limited early LLM serving. This innovation, combined with continuous batching, made vLLM 2-4x more efficient than previous serving approaches and established it as the standard.
+
+### 6. What Does This Tool Solve That Others Don't?
+
+vLLM pioneered PagedAttention — treating KV cache like virtual memory with page-based allocation — which eliminated the memory fragmentation that limited early LLM serving. This innovation, combined with continuous batching, made vLLM 2-4x more efficient than previous serving approaches and established it as the standard.
+
+### 7. How Does This Tool Rank Compared to Others?
+
+| Rank | Tool | Stars | Key Advantage |
+|------|------|-------|---------------|
+| 1 | vLLM | 85K+ | Largest community, broadest hardware support |
+| 2 | SGLang | 30K | RadixAttention, best for RAG workloads |
+| 3 | TensorRT-LLM | 14K | Highest single-GPU throughput on NVIDIA |
+| 4 | llama.cpp | 119K | Best for CPU/consumer hardware |
+| 5 | Ollama | 175K | Easiest local deployment |
+
+*See [tools/README.md](README.md) for the full ranking table.*
+
+### 8. How Can This Tool Be Improved? How Active Is Development?
+
+Development is extremely active (pushed July 2026) with 18,841 forks — the most actively developed LLM inference project. Improvement areas include reducing the issue backlog, improving multi-hardware support consistency, reducing memory management issues, better documentation for edge cases, and stabilizing APIs for production use.
+
+### 9. Official Maintainer Contacts
+
+Maintained by the vLLM Project (originated from UC Berkeley Sky Computing). Contact via GitHub Issues at vllm-project/vllm, their Discord (invite via vllm.ai), or discussions on GitHub. Core maintainers include researchers from Sky Computing and engineers from multiple companies.
+
+### 10. General Usage Guidance
+
+Best as the default LLM serving engine for most use cases. Use `vllm serve model_name` for quick deployment. For NVIDIA-only maximum throughput, consider TensorRT-LLM. For RAG workloads, consider SGLang. Always test with your specific model and hardware — performance characteristics vary significantly.
+
 ---
 
 ## License

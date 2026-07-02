@@ -219,6 +219,61 @@ API key: generate at https://www.runpod.io/console/settings
 | 2026-06-16 | First triaged | Added to roster, deep-dive template created |
 | 2026-06-17 | Research enriched | Official links, setup commands, sharp edges populated from community research |
 
+
+---
+
+## Deep Analysis
+
+### 1. How Is This Tool Useful?
+
+RunPod provides GPU cloud infrastructure at industry-leading prices ($0.34-2.69/hr) through three offerings: Pods (dedicated GPU instances), Serverless (auto-scaling GPU functions), and Community Cloud (peer-to-peer GPU marketplace). With 30+ regions, RunPod is the cost leader for GPU compute. The platform is popular for both training and inference workloads.
+
+### 2. Gotchas of Using This Tool
+
+RunPod's Community Cloud is a peer-to-peer marketplace — GPU reliability and security vary by provider. The runpod-python repo has 67 open issues. Serverless cold starts can be slow (30+ seconds). The platform's lower prices come with trade-offs in support quality and SLA guarantees compared to enterprise providers.
+
+### 3. Limitations
+
+Community Cloud providers are unverified individuals — security and reliability are not guaranteed. Serverless GPU functions have cold start latency. Enterprise features (SSO, audit logging, compliance certifications) are limited compared to AWS or CoreWeave. International data residency options are limited.
+
+### 4. How Secure Is This Tool?
+
+RunPod provides API key authentication and encrypted storage for Pods. Community Cloud has additional security considerations since GPUs are provided by third parties. SOC 2 compliance should be verified. Enterprise/security features are less mature than larger cloud providers.
+
+### 5. Usefulness to General Public and Non-Technical Users
+
+**Rating: 5/10**
+
+RunPod uniquely combines three GPU access models — dedicated Pods, Serverless, and Community Cloud — giving users flexibility across price/reliability trade-offs. The Community Cloud marketplace enables GPU owners to monetize idle hardware, creating the cheapest verified GPU rates available.
+
+### 6. What Does This Tool Solve That Others Don't?
+
+RunPod uniquely combines three GPU access models — dedicated Pods, Serverless, and Community Cloud — giving users flexibility across price/reliability trade-offs. The Community Cloud marketplace enables GPU owners to monetize idle hardware, creating the cheapest verified GPU rates available.
+
+### 7. How Does This Tool Rank Compared to Others?
+
+| Rank | Tool | Stars | Key Advantage |
+|------|------|-------|---------------|
+| 1 | vLLM | 85K+ | Largest community, broadest hardware support |
+| 2 | SGLang | 30K | RadixAttention, best for RAG workloads |
+| 3 | TensorRT-LLM | 14K | Highest single-GPU throughput on NVIDIA |
+| 4 | llama.cpp | 119K | Best for CPU/consumer hardware |
+| 5 | Ollama | 175K | Easiest local deployment |
+
+*See [tools/README.md](README.md) for the full ranking table.*
+
+### 8. How Can This Tool Be Improved? How Active Is Development?
+
+Development is active (runpod-python pushed July 2026). Improvement areas include better security for Community Cloud, faster serverless cold starts, enterprise compliance certifications, and more transparent GPU availability monitoring.
+
+### 9. Official Maintainer Contacts
+
+Maintained by RunPod Inc. Contact via GitHub Issues at runpod/runpod-python, their Discord community, or support@runpod.io. The company is venture-backed.
+
+### 10. General Usage Guidance
+
+Best for cost-sensitive GPU workloads. Use Pods for sustained workloads, Serverless for spiky traffic, and Community Cloud for the cheapest rates (with acceptable reliability trade-offs). Compare with Lambda Labs (better reliability, higher price) and Vast.ai (cheaper, less reliable).
+
 ---
 
 ## License

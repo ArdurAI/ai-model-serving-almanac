@@ -243,6 +243,61 @@ serve.run(llm_app)
 | 2026-06-16 | First triaged | Added to roster, deep-dive template created |
 | 2026-06-17 | Research enriched | Official links, setup commands, sharp edges populated from community research |
 
+
+---
+
+## Deep Analysis
+
+### 1. How Is This Tool Useful?
+
+Ray Serve is the model serving component of the Ray distributed computing framework, enabling multi-model serving graphs, online RAG pipelines, and seamless scaling from a single machine to a cluster. It integrates tightly with Ray's training and data processing capabilities, making it ideal for end-to-end ML pipelines. Ray Serve supports complex deployment topologies including multi-model routing, ensemble models, and pipeline stages.
+
+### 2. Gotchas of Using This Tool
+
+Ray has 3,473 open issues and 4 security advisories — the large issue count reflects the framework's broad scope. Ray Serve adds overhead compared to bare inference engines — it's a distributed serving layer, not an inference optimizer. Cluster setup and management is complex. Resource allocation across actors can be finicky.
+
+### 3. Limitations
+
+Ray Serve is part of the larger Ray ecosystem — adopting it means adopting Ray's runtime, which is heavy. Not optimized for raw LLM inference throughput (pair with vLLM as backend). Python-centric design limits multi-language use cases. Debugging distributed Ray applications can be challenging.
+
+### 4. How Secure Is This Tool?
+
+4 published GitHub security advisories. Apache-2.0 license. Ray's distributed architecture increases attack surface — Ray Dashboard and Ray Client should be secured. Anyscale (the company behind Ray) provides enterprise security features for managed deployments.
+
+### 5. Usefulness to General Public and Non-Technical Users
+
+**Rating: 4/10**
+
+Ray Serve uniquely enables complex multi-model serving graphs — you can compose models into pipelines (e.g., embedding → retrieval → LLM → post-processing) with independent scaling per stage. Combined with Ray's training and data processing, it provides an end-to-end ML platform that no other serving tool matches.
+
+### 6. What Does This Tool Solve That Others Don't?
+
+Ray Serve uniquely enables complex multi-model serving graphs — you can compose models into pipelines (e.g., embedding → retrieval → LLM → post-processing) with independent scaling per stage. Combined with Ray's training and data processing, it provides an end-to-end ML platform that no other serving tool matches.
+
+### 7. How Does This Tool Rank Compared to Others?
+
+| Rank | Tool | Stars | Key Advantage |
+|------|------|-------|---------------|
+| 1 | vLLM | 85K+ | Largest community, broadest hardware support |
+| 2 | SGLang | 30K | RadixAttention, best for RAG workloads |
+| 3 | TensorRT-LLM | 14K | Highest single-GPU throughput on NVIDIA |
+| 4 | llama.cpp | 119K | Best for CPU/consumer hardware |
+| 5 | Ollama | 175K | Easiest local deployment |
+
+*See [tools/README.md](README.md) for the full ranking table.*
+
+### 8. How Can This Tool Be Improved? How Active Is Development?
+
+Development is very active (pushed July 2026) with 7,751 forks — one of the most actively developed distributed computing projects. Improvement areas include simplifying cluster setup, reducing overhead, better integration with modern inference engines, and improving documentation for serving-specific use cases.
+
+### 9. Official Maintainer Contacts
+
+Maintained by Anyscale Inc. and the Ray community. Contact via GitHub Issues at ray-project/ray, Ray Discuss (discuss.ray.io), or Ray Slack. Core contributors include Anyscale engineers and UC Berkeley RISELab researchers.
+
+### 10. General Usage Guidance
+
+Best for complex multi-model serving pipelines and teams already using Ray for training/data processing. Pair with vLLM as the LLM backend. For simpler single-model serving, use vLLM directly or BentoML. Use Anyscale for managed Ray if cluster management is a burden.
+
 ---
 
 ## License

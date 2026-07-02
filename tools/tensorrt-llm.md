@@ -230,6 +230,61 @@ for output in llm.generate(['Hi, how are you?']):
 | 2026-06-16 | First triaged | Added to roster, deep-dive template created |
 | 2026-06-17 | Research enriched | Official links, setup commands, sharp edges populated from community research |
 
+
+---
+
+## Deep Analysis
+
+### 1. How Is This Tool Useful?
+
+TensorRT-LLM is NVIDIA's flagship LLM inference engine, achieving the highest throughput on NVIDIA GPUs — typically 30-60% faster than vLLM on H100/H200. It supports FP8/FP4 quantization, in-flight batching, speculative decoding, and per-model graph optimization. TensorRT-LLM is the engine behind NVIDIA NIM and many commercial inference providers (Together AI, Fireworks AI use it for optimization).
+
+### 2. Gotchas of Using This Tool
+
+TensorRT-LLM has 1,471 open issues. Per-model compilation is required — each model must be compiled for specific GPU architecture, which takes time and creates deployment complexity. NVIDIA-only (no AMD/Intel support). The build process can be challenging with many dependencies. Documentation for advanced features is sparse.
+
+### 3. Limitations
+
+Locked to NVIDIA GPUs. Per-model, per-GPU compilation creates large engine artifacts and slow iteration cycles. Source code includes proprietary NVIDIA components alongside open-source Apache-2.0 code. Not as flexible as vLLM for rapid model experimentation.
+
+### 4. How Secure Is This Tool?
+
+No published security advisories. The license is complex — some components are Apache-2.0, others are NVIDIA proprietary. Compiled engines are binary artifacts that can't be easily audited. NVIDIA provides security updates through TensorRT releases.
+
+### 5. Usefulness to General Public and Non-Technical Users
+
+**Rating: 3/10**
+
+TensorRT-LLM achieves the highest raw throughput on NVIDIA GPUs through deep kernel-level optimization — the per-model graph compilation enables optimizations that JIT-based engines like vLLM can't perform. For latency-critical, maximum-throughput NVIDIA deployments, nothing else matches it.
+
+### 6. What Does This Tool Solve That Others Don't?
+
+TensorRT-LLM achieves the highest raw throughput on NVIDIA GPUs through deep kernel-level optimization — the per-model graph compilation enables optimizations that JIT-based engines like vLLM can't perform. For latency-critical, maximum-throughput NVIDIA deployments, nothing else matches it.
+
+### 7. How Does This Tool Rank Compared to Others?
+
+| Rank | Tool | Stars | Key Advantage |
+|------|------|-------|---------------|
+| 1 | vLLM | 85K+ | Largest community, broadest hardware support |
+| 2 | SGLang | 30K | RadixAttention, best for RAG workloads |
+| 3 | TensorRT-LLM | 14K | Highest single-GPU throughput on NVIDIA |
+| 4 | llama.cpp | 119K | Best for CPU/consumer hardware |
+| 5 | Ollama | 175K | Easiest local deployment |
+
+*See [tools/README.md](README.md) for the full ranking table.*
+
+### 8. How Can This Tool Be Improved? How Active Is Development?
+
+Development is very active (pushed July 2026) with 2,512 forks. Improvement areas include simplifying the compilation process, reducing engine build times, better documentation, broader model support, and reducing the dependency complexity. The open-source/community engagement could be improved.
+
+### 9. Official Maintainer Contacts
+
+Maintained by NVIDIA (TensorRT team). Contact via GitHub Issues at NVIDIA/TensorRT-LLM or NVIDIA developer forums. Enterprise support through NVIDIA support contracts.
+
+### 10. General Usage Guidance
+
+Best for maximum-throughput NVIDIA GPU deployments where per-model compilation is acceptable. Compare with vLLM (easier to use, broader hardware) and SGLang (RAG optimization). Use TensorRT-LLM when raw throughput on NVIDIA is the priority. Pre-built Docker images simplify deployment.
+
 ---
 
 ## License
