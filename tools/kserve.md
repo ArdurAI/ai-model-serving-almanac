@@ -1,5 +1,8 @@
 # KServe
 
+
+[![Infrastructure](https://img.shields.io/badge/Also_in-Infrastructure-blue)](https://github.com/ArdurAI/ai-infrastructure-almanac)
+
 - **Category**: Model Serving & Inference Engines
 - **Type**: K8s Model Serving
 - **License**: Apache-2.0

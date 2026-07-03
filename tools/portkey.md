@@ -1,5 +1,8 @@
 # Portkey
 
+
+[![Observability](https://img.shields.io/badge/Also_in-Observability-blue)](https://github.com/ArdurAI/ai-observability-almanac) [![AI Protocols](https://img.shields.io/badge/Also_in-AI_Protocols-blue)](https://github.com/ArdurAI/ai-protocol-almanac) [![Infrastructure](https://img.shields.io/badge/Also_in-Infrastructure-blue)](https://github.com/ArdurAI/ai-infrastructure-almanac)
+
 - **Category**: Model Serving & Inference Engines
 - **Type**: AI Gateway
 - **License**: Partially open

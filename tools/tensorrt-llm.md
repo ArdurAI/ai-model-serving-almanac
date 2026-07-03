@@ -1,5 +1,8 @@
 # TensorRT-LLM
 
+
+[![Infrastructure](https://img.shields.io/badge/Also_in-Infrastructure-blue)](https://github.com/ArdurAI/ai-infrastructure-almanac)
+
 - **Category**: Model Serving & Inference Engines
 - **Type**: Inference Engine
 - **License**: Apache-2.0 + closed

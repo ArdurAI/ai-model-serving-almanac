@@ -1,5 +1,8 @@
 # Bifrost
 
+
+[![AI Security](https://img.shields.io/badge/Also_in-AI_Security-blue)](https://github.com/ArdurAI/ai-security-almanac)
+
 - **Category**: Model Serving & Inference Engines
 - **Type**: AI Gateway
 - **License**: Apache-2.0
