@@ -1,0 +1,430 @@
+meta:
+  repo: ArdurAI/ai-model-serving-almanac
+  category: Model Serving
+  total_tools: 47
+  generated_at: '2026-07-03T10:51:27.749435'
+  schema_version: 2.0.0
+tools:
+- name: Aphrodite Engine
+  id: aphrodite-engine
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: null
+  github: null
+  description: PygmalionAI; vLLM fork; broadest quantization (FP2-FP12, EXL2, GGUF); creative/roleplay
+  file: aphrodite-engine.md
+- name: Baseten
+  id: baseten
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: null
+  github: null
+  description: Free tier → Enterprise; multi-cloud capacity; TensorRT/SGLang/vLLM/TGI runtimes
+  file: baseten.md
+- name: BentoML
+  id: bentoml
+  tier: C
+  type: Unknown
+  license: Apache-2.0
+  stars: null
+  github: https://github.com/bentoml/BentoML
+  description: Python-first packaging; BentoCloud hosted; multi-framework
+  file: bentoml.md
+- name: Bifrost
+  id: bifrost
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: null
+  github: null
+  description: Go; ~11μs overhead; virtual keys; RBAC; SSO; vault integration; MCP tool filtering
+  file: bifrost.md
+- name: CoreWeave
+  id: coreweave
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: null
+  github: null
+  description: K8s-native; multi-region; NVIDIA partner; dedicated infra
+  file: coreweave.md
+- name: Crusoe
+  id: crusoe
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: '9'
+  github: null
+  description: Flared-gas powered data centers; NVIDIA partner
+  file: crusoe.md
+- name: CTranslate2
+  id: ctranslate2
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: null
+  github: null
+  description: OpenNMT; fast inference for Transformer models; C++ backend; Python bindings
+  file: ctranslate2.md
+- name: Deep Infra
+  id: deep-infra
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: null
+  github: null
+  description: Low-cost inference; integrates with Dynamo
+  file: deep-infra.md
+- name: DeepSpeed-MII
+  id: deepspeed-mii
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: null
+  github: null
+  description: Microsoft Research; Blocked KV caching; Dynamic SplitFuse; 37,000+ models
+  file: deepspeed-mii.md
+- name: ExecuTorch
+  id: executorch
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: null
+  github: null
+  description: Meta; 1.0 GA Oct 2025; 50KB footprint; 12+ hardware backends; billions of users
+  file: executorch.md
+- name: ExLlamaV2
+  id: exllamav2
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: null
+  github: null
+  description: EXL2 quantization; 2-3x faster than GGUF on GPU; single-card focus
+  file: exllamav2.md
+- name: Fireworks AI
+  id: fireworks-ai
+  tier: C
+  type: Unknown
+  license: Commercial
+  stars: null
+  github: https://github.com/fw-ai-external/python-sdk
+  description: Per-token; FireAttention sub-100ms TTFT; low latency
+  file: fireworks-ai.md
+- name: GMI Cloud
+  id: gmi-cloud
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: null
+  github: null
+  description: H200 bare metal; 40% speed advantage over virtualized cloud
+  file: gmi-cloud.md
+- name: KAITO
+  id: kaito
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: null
+  github: null
+  description: Microsoft; AKS, K8s; automates GPU pool provisioning, model deployment, inference serving
+  file: kaito.md
+- name: KServe
+  id: kserve
+  tier: C
+  type: Unknown
+  license: Apache-2.0
+  stars: null
+  github: https://github.com/kserve/kserve
+  description: CNCF Incubating; InferenceService CRD; scale-to-zero; canary; vLLM/TGI runtimes
+  file: kserve.md
+- name: Kueue
+  id: kueue
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: null
+  github: null
+  description: CNCF; multi-tenant GPU queueing; fair-share; preemption; GPU util 25-35% → 60-85%
+  file: kueue.md
+- name: Lambda Labs
+  id: lambda-labs
+  tier: C
+  type: Unknown
+  license: Commercial
+  stars: null
+  github: null
+  description: $3.78/hr H100 SXM; 99.9% SLA; 1-Click Clusters (16-2,000 GPUs); no egress fees
+  file: lambda-labs.md
+- name: LiteLLM
+  id: litellm
+  tier: C
+  type: Unknown
+  license: MIT
+  stars: null
+  github: https://github.com/BerriAI/litellm
+  description: 18K+ stars; 100+ providers; OpenAI-compatible proxy; YC W23
+  file: litellm.md
+- name: llama.cpp
+  id: llamacpp
+  tier: C
+  type: Unknown
+  license: MIT
+  stars: null
+  github: https://github.com/ggml-org/llama.cpp
+  description: 100K+ stars; GGUF format; Metal/CUDA/Vulkan/ROCm; ARM, Raspberry Pi, WASM
+  file: llamacpp.md
+- name: llm-d
+  id: llm-d
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: 3,665
+  github: null
+  description: Community; multi-node, multi-GPU for 70B+; disaggregated serving; KV cache offloading
+  file: llm-d.md
+- name: LMDeploy
+  id: lmdeploy
+  tier: C
+  type: Unknown
+  license: Apache-2.0
+  stars: null
+  github: https://github.com/InternLM/lmdeploy
+  description: Shanghai AI Lab; TurboMind C++/CUDA; 1.5x vLLM on AWQ/MXFP4; DeepSeek/Qwen/InternLM
+  file: lmdeploy.md
+- name: MindIE
+  id: mindie
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: null
+  github: null
+  description: Huawei Ascend NPU专用; 闭源商业
+  file: mindie.md
+- name: MLC-LLM
+  id: mlc-llm
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: null
+  github: null
+  description: On-device deployment; fragmented; Ollama emerged as winner in this niche
+  file: mlc-llm.md
+- name: MLX
+  id: mlx
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: null
+  github: null
+  description: Apple; 24,600+ stars; unified memory; 4,255+ HF models; Apple Silicon only
+  file: mlx.md
+- name: Modal
+  id: modal
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: null
+  github: null
+  description: Per-GPU-second; fast cold starts; vLLM native; pay-per-second for spiky workloads
+  file: modal.md
+- name: Nebius
+  id: nebius
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: null
+  github: null
+  description: NVIDIA partner; Dynamo/TensorRT-LLM optimized
+  file: nebius.md
+- name: NVIDIA Dynamo
+  id: nvidia-dynamo
+  tier: C
+  type: application/json" -d '{
+  license: Open source
+  stars: null
+  github: https://github.com/ai-dynamo/dynamo
+  description: GTC 2026; disaggregated serving; KV-aware routing; 7x Blackwell boost; replaces Triton
+  file: nvidia-dynamo.md
+- name: NVIDIA GPU Operator
+  id: nvidia-gpu-operator
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: null
+  github: null
+  description: Automates drivers, MIG, time-slicing, DCGM monitoring
+  file: nvidia-gpu-operator.md
+- name: NVIDIA Nim
+  id: nvidia-nim
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: null
+  github: null
+  description: Containerized product on TensorRT-LLM; NGC distribution
+  file: nvidia-nim.md
+- name: Ollama
+  id: ollama
+  tier: C
+  type: Unknown
+  license: MIT
+  stars: null
+  github: https://github.com/ollama/ollama
+  description: 52M monthly downloads; on-premise; not for multi-tenant production (collapses under 5 concurrent)
+  file: ollama.md
+- name: Portkey
+  id: portkey
+  tier: C
+  type: Unknown
+  license: Partially open
+  stars: null
+  github: https://github.com/Portkey-AI/gateway
+  description: 250+ models; 20-40ms latency; MCP Gateway; open source March 2026
+  file: portkey.md
+- name: Ray Serve
+  id: ray-serve
+  tier: C
+  type: Unknown
+  license: Apache-2.0
+  stars: null
+  github: https://github.com/ray-project/ray
+  description: Multi-model serving graphs; online RAG; integration with Ray training
+  file: ray-serve.md
+- name: Replicate
+  id: replicate
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: null
+  github: null
+  description: Per-second billing; simple API; Cog container format; higher effective cost at volume
+  file: replicate.md
+- name: RTP-LLM
+  id: rtp-llm
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: null
+  github: null
+  description: Alibaba's internal serving engine; MoE and long-context optimizations
+  file: rtp-llm.md
+- name: RunPod
+  id: runpod
+  tier: C
+  type: Unknown
+  license: Commercial
+  stars: null
+  github: null
+  description: $0.34-2.69/hr; Pods + Serverless + Community Cloud; 30+ regions; cost leader
+  file: runpod.md
+- name: Seldon Core v2
+  id: seldon-core-v2
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: null
+  github: null
+  description: Multi-step pipelines; drift detection; MLServer multi-model per GPU
+  file: seldon-core-v2.md
+- name: SGLang
+  id: sglang
+  tier: C
+  type: Unknown
+  license: Apache-2.0
+  stars: null
+  github: https://github.com/sgl-project/sglang
+  description: ~20K+ stars; RadixAttention; 29% throughput advantage on RAG workloads
+  file: sglang.md
+- name: TensorFlow Serving
+  id: tensorflow-serving
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: null
+  github: null
+  description: Google; TensorFlow-native; legacy for LLM workloads
+  file: tensorflow-serving.md
+- name: TensorRT Edge-LLM
+  id: tensorrt-edge-llm
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: null
+  github: null
+  description: NVIDIA; C++ framework; EAGLE-3 speculative decoding; NVFP4; chunked prefill
+  file: tensorrt-edge-llm.md
+- name: TensorRT-LLM
+  id: tensorrt-llm
+  tier: C
+  type: Unknown
+  license: Apache-2.0 + closed
+  stars: null
+  github: https://github.com/NVIDIA/TensorRT-LLM
+  description: NVIDIA-backed; highest throughput; 30-60% faster than vLLM on H100; per-model compile
+  file: tensorrt-llm.md
+- name: TensorZero
+  id: tensorzero
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: 11K
+  github: null
+  description: Rust; ~0.3ms; LLM gateway, observability, optimization, evaluations, experimentation
+  file: tensorzero.md
+- name: TGI (Text Generation Inference)
+  id: tgi-text-generation-inference
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: null
+  github: null
+  description: HuggingFace-backed; 800+ HF models; Rust HTTP server; maintenance mode as of late 2025
+  file: tgi-text-generation-inference.md
+- name: Together AI
+  id: together-ai
+  tier: C
+  type: Unknown
+  license: Commercial
+  stars: '81'
+  github: null
+  description: Per-token; broad model catalog; fine-tuned deployment; research focus
+  file: together-ai.md
+- name: TorchServe
+  id: torchserve
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: null
+  github: null
+  description: PyTorch/Amazon; PyTorch-native; less LLM-specific than vLLM
+  file: torchserve.md
+- name: Triton Inference Server
+  id: triton-inference-server
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: null
+  github: null
+  description: NVIDIA; multi-framework (LLM + CV + tabular); being displaced by Dynamo for LLMs
+  file: triton-inference-server.md
+- name: Vast.ai
+  id: vastai
+  tier: C
+  type: Unknown
+  license: Unknown
+  stars: null
+  github: null
+  description: ~$0.90/hr H100 (interruptible); cheapest verified rates; 68+ GPU classes
+  file: vastai.md
+- name: vLLM
+  id: vllm
+  tier: C
+  type: Unknown
+  license: Apache-2.0
+  stars: null
+  github: https://github.com/vllm-project/vllm
+  description: 73.7K+ stars; PagedAttention; 200+ models; multi-GPU (NVIDIA, AMD, Intel, TPU)
+  file: vllm.md
