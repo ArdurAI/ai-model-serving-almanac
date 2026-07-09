@@ -9,7 +9,7 @@
 - **Region**: Global
 - **Tier**: A
 - **First Triaged**: 2026-06-16
-- **Last Updated**: 2026-06-16
+- **Last Updated**: 2026-07-09
 
 > CNCF Incubating; InferenceService CRD; scale-to-zero; canary; vLLM/TGI runtimes
 
@@ -237,6 +237,10 @@ EOF
 ---
 
 ## Deep Analysis
+
+### Daily monitoring update — 2026-07-09
+
+- **Community health:** Open issues decreased from 636 to 585 (-51). This is a positive backlog-reduction signal.
 
 ### 1. How Is This Tool Useful?
 

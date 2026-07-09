@@ -9,7 +9,7 @@
 - **Region**: US
 - **Tier**: A
 - **First Triaged**: 2026-06-16
-- **Last Updated**: 2026-06-16
+- **Last Updated**: 2026-07-09
 
 > 18K+ stars; 100+ providers; OpenAI-compatible proxy; YC W23
 
@@ -249,6 +249,11 @@ docker-compose up db prometheus
 ---
 
 ## Deep Analysis
+
+### Daily monitoring update — 2026-07-09
+
+- **Latest release:** `v1.91.1` (2026-07-08): foregrounds Docker image signature verification with cosign and reiterates the release signing key; operators should verify images as part of supply-chain hygiene.
+- **Community health:** Open issues increased from 3,641 to 3,828 (+187). This is a material backlog increase; monitor regression volume and maintainer response time.
 
 ### 1. How Is This Tool Useful?
 

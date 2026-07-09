@@ -9,7 +9,7 @@
 - **Region**: Global
 - **Tier**: A
 - **First Triaged**: 2026-06-16
-- **Last Updated**: 2026-06-16
+- **Last Updated**: 2026-07-09
 
 > 73.7K+ stars; PagedAttention; 200+ models; multi-GPU (NVIDIA, AMD, Intel, TPU)
 
@@ -230,6 +230,10 @@ outputs = llm.generate(["Hello world"], params)
 ---
 
 ## Deep Analysis
+
+### Daily monitoring update — 2026-07-09
+
+- **Community health:** Open issues increased from 5,549 to 5,629 (+80). This is a notable issue-load increase; keep an eye on community support pressure.
 
 ### 1. How Is This Tool Useful?
 

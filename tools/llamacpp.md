@@ -9,9 +9,9 @@
 - **Region**: Global
 - **Tier**: A
 - **First Triaged**: 2026-06-16
-- **Last Updated**: 2026-06-16
+- **Last Updated**: 2026-07-09
 
-> 100K+ stars; GGUF format; Metal/CUDA/Vulkan/ROCm; ARM, Raspberry Pi, WASM
+> 119K+ stars; GGUF format; Metal/CUDA/Vulkan/ROCm; ARM, Raspberry Pi, WASM
 
 ---
 
@@ -249,9 +249,14 @@ llama-server -hf ggml-org/gemma-3-1b-it-GGUF --port 8080
 
 ## Deep Analysis
 
+### Daily monitoring update — 2026-07-09
+
+- **Latest release:** `b9940` (2026-07-09): initializes offline parameters for `llama-bench` and refreshes release artifacts including macOS/iOS binaries.
+- **Adoption signal:** GitHub stars moved from 119,244 to 119,779 (+535). Star references in this file now use the new 119,779 baseline.
+
 ### 1. How Is This Tool Useful?
 
-llama.cpp is the most popular LLM inference engine by GitHub stars (119K+), providing C/C++ inference for GGUF-format models across CPU, GPU (CUDA, Metal, Vulkan, ROCm), and edge devices. It runs on everything from Raspberry Pi to multi-GPU servers and is the foundation for Ollama, LM Studio, and many other tools. The engine's broad hardware support and minimal dependencies make it the universal choice for local LLM inference.
+llama.cpp is the most popular LLM inference engine by GitHub stars (119.8K+), providing C/C++ inference for GGUF-format models across CPU, GPU (CUDA, Metal, Vulkan, ROCm), and edge devices. It runs on everything from Raspberry Pi to multi-GPU servers and is the foundation for Ollama, LM Studio, and many other tools. The engine's broad hardware support and minimal dependencies make it the universal choice for local LLM inference.
 
 ### 2. Gotchas of Using This Tool
 

@@ -9,7 +9,7 @@
 - **Region**: Global
 - **Tier**: A
 - **First Triaged**: 2026-06-16
-- **Last Updated**: 2026-06-16
+- **Last Updated**: 2026-07-09
 
 > ~20K+ stars; RadixAttention; 29% throughput advantage on RAG workloads
 
@@ -240,6 +240,10 @@ docker run --gpus all \
 ---
 
 ## Deep Analysis
+
+### Daily monitoring update — 2026-07-09
+
+- **Community health:** Open issues increased from 3,917 to 4,095 (+178). This is a material backlog increase; monitor regression volume and maintainer response time.
 
 ### 1. How Is This Tool Useful?
 

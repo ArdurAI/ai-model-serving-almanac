@@ -9,7 +9,7 @@
 - **Region**: Global
 - **Tier**: A
 - **First Triaged**: 2026-06-16
-- **Last Updated**: 2026-06-16
+- **Last Updated**: 2026-07-09
 
 > 52M monthly downloads; on-premise; not for multi-tenant production (collapses under 5 concurrent)
 
@@ -240,6 +240,10 @@ python -c "import ollama; print(ollama.chat(model='gemma4', messages=[{'role': '
 ---
 
 ## Deep Analysis
+
+### Daily monitoring update — 2026-07-09
+
+- **Latest release:** `v0.31.2` (2026-07-06): enables flash attention on older NVIDIA compute-capability 6.x GPUs, improves iGPU offload for padded vision models, fixes structured output for thinking models when thinking is disabled, and hardens GGUF model creation.
 
 ### 1. How Is This Tool Useful?
 
