@@ -9,7 +9,7 @@
 - **Region**: Global
 - **Tier**: A
 - **First Triaged**: 2026-06-16
-- **Last Updated**: 2026-07-09
+- **Last Updated**: 2026-07-10
 
 > 119K+ stars; GGUF format; Metal/CUDA/Vulkan/ROCm; ARM, Raspberry Pi, WASM
 
@@ -248,6 +248,10 @@ llama-server -hf ggml-org/gemma-3-1b-it-GGUF --port 8080
 ---
 
 ## Deep Analysis
+
+### Daily monitoring update — 2026-07-10
+
+- **Latest release:** `b9948` (2026-07-10): reduces temporary CUDA memory usage by processing `ggml_top_k()` and `ggml_argsort()` in smaller chunks, allocates temporary buffers once per loop, and refreshes release artifacts across macOS/iOS/Linux backends.
 
 ### Daily monitoring update — 2026-07-09
 
