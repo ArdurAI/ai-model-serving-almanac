@@ -9,9 +9,9 @@
 - **Region**: Global
 - **Tier**: A
 - **First Triaged**: 2026-06-16
-- **Last Updated**: 2026-07-09
+- **Last Updated**: 2026-07-12
 
-> ~20K+ stars; RadixAttention; 29% throughput advantage on RAG workloads
+> 30K+ stars; RadixAttention; 29% throughput advantage on RAG workloads
 
 ---
 
@@ -241,6 +241,11 @@ docker run --gpus all \
 
 ## Deep Analysis
 
+### Daily monitoring update — 2026-07-12
+
+- **Latest release:** `v0.5.15` (2026-07-10): production-tunes GLM-5.2 NVFP4 on Blackwell, turns Spec V2 on by default, adds IndexShare MTP and TopK V2 optimizations, introduces native Exa-backed `web_search`, expands model support (Hy3, HRM-Text, NVIDIA LocateAnything-3B, Unlimited-OCR, JoyEcho, Qwen3.6 NVFP4), and advances breakable CUDA Graph execution.
+- **Community health:** Open issues increased from 4,098 to 4,154 (+56). This is a material backlog increase alongside a major performance release.
+
 ### Daily monitoring update — 2026-07-09
 
 - **Community health:** Open issues increased from 3,917 to 4,095 (+178). This is a material backlog increase; monitor regression volume and maintainer response time.
@@ -251,7 +256,7 @@ SGLang is a high-performance LLM serving framework featuring RadixAttention (aut
 
 ### 2. Gotchas of Using This Tool
 
-SGLang has 3,880 open issues — very high, reflecting rapid growth and broad feature development. RadixAttention benefits depend on workload characteristics — pure single-turn workloads see minimal benefit. The project moves fast with frequent API changes. Documentation sometimes lags behind features.
+SGLang has 4,154 open issues — very high, reflecting rapid growth and broad feature development. RadixAttention benefits depend on workload characteristics — pure single-turn workloads see minimal benefit. The project moves fast with frequent API changes. Documentation sometimes lags behind features.
 
 ### 3. Limitations
 

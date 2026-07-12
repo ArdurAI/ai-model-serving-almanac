@@ -9,9 +9,9 @@
 - **Region**: Global
 - **Tier**: A
 - **First Triaged**: 2026-06-16
-- **Last Updated**: 2026-07-09
+- **Last Updated**: 2026-07-12
 
-> 73.7K+ stars; PagedAttention; 200+ models; multi-GPU (NVIDIA, AMD, Intel, TPU)
+> 86K+ stars; Model Runner V2; continuous batching; 200+ models; multi-GPU (NVIDIA, AMD, Intel, TPU)
 
 ---
 
@@ -231,17 +231,22 @@ outputs = llm.generate(["Hello world"], params)
 
 ## Deep Analysis
 
+### Daily monitoring update — 2026-07-12
+
+- **Latest release:** `v0.25.0` (2026-07-11): 558-commit release that makes Model Runner V2 the default for dense models, removes legacy PagedAttention, brings the Transformers backend to native-vLLM performance, adds new model support (LLaVA-OneVision-2, Unlimited OCR, MOSS-Transcribe-Diarize, openai/privacy-filter, Hy3, GLM-5/DeepSeek-V3.2, MiniMax-M3 improvements), introduces a unified streaming parser engine, and expands heterogeneous-vocabulary speculative decoding.
+- **Community health:** Open issues increased from 5,639 to 5,705 (+66). This is a material support-load increase; watch MRv2 migration regressions and model-zoo churn.
+
 ### Daily monitoring update — 2026-07-09
 
 - **Community health:** Open issues increased from 5,549 to 5,629 (+80). This is a notable issue-load increase; keep an eye on community support pressure.
 
 ### 1. How Is This Tool Useful?
 
-vLLM is the dominant open-source LLM inference engine with 85K+ GitHub stars, featuring PagedAttention (virtual memory for KV cache), continuous batching, and support for 200+ model architectures across NVIDIA, AMD, Intel, and TPU hardware. It has become the de facto standard for LLM serving, powering inference at companies like Anthropic, Cohere, and many others. The OpenAI-compatible server makes deployment trivial.
+vLLM is the dominant open-source LLM inference engine with 86K+ GitHub stars, now centered on Model Runner V2, continuous batching, and support for 200+ model architectures across NVIDIA, AMD, Intel, and TPU hardware. It pioneered PagedAttention, but v0.25.0 retires the legacy implementation as the V1/MRv2 backend becomes standard. It has become the de facto standard for LLM serving, powering inference at companies like Anthropic, Cohere, and many others. The OpenAI-compatible server makes deployment trivial.
 
 ### 2. Gotchas of Using This Tool
 
-vLLM has 5,521 open issues — the highest raw count in the ecosystem, reflecting its massive user base and complex multi-hardware support. 30 published security advisories mean production deployments must track CVEs carefully. GPU memory leaks in model forward passes can occur with repeated batch inference. OOM during sampler warmup with large MoE models requires careful memory tuning.
+vLLM has 5,705 open issues — the highest raw count in the ecosystem, reflecting its massive user base and complex multi-hardware support. 30 published security advisories mean production deployments must track CVEs carefully. GPU memory leaks in model forward passes can occur with repeated batch inference. OOM during sampler warmup with large MoE models requires careful memory tuning.
 
 ### 3. Limitations
 
@@ -265,7 +270,7 @@ vLLM pioneered PagedAttention — treating KV cache like virtual memory with pag
 
 | Rank | Tool | Stars | Key Advantage |
 |------|------|-------|---------------|
-| 1 | vLLM | 85K+ | Largest community, broadest hardware support |
+| 1 | vLLM | 86K+ | Largest community, broadest hardware support |
 | 2 | SGLang | 30K | RadixAttention, best for RAG workloads |
 | 3 | TensorRT-LLM | 14K | Highest single-GPU throughput on NVIDIA |
 | 4 | llama.cpp | 119K | Best for CPU/consumer hardware |

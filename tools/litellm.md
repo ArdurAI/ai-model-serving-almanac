@@ -9,9 +9,9 @@
 - **Region**: US
 - **Tier**: A
 - **First Triaged**: 2026-06-16
-- **Last Updated**: 2026-07-09
+- **Last Updated**: 2026-07-12
 
-> 18K+ stars; 100+ providers; OpenAI-compatible proxy; YC W23
+> 53K+ stars; 100+ providers; OpenAI-compatible proxy; YC W23
 
 ---
 
@@ -250,6 +250,11 @@ docker-compose up db prometheus
 
 ## Deep Analysis
 
+### Daily monitoring update — 2026-07-12
+
+- **Latest release:** `v1.92.0` (2026-07-12): reiterates cosign verification for Docker image signatures and includes proxy fixes for team passthrough-route admin gating, Bedrock/Cohere embedding-type serialization, OpenAI responses cache-hit streaming, DeepSeek Anthropic-endpoint/tool sanitization, Bedrock batch metadata validation, plus Prometheus user budget metrics and test stabilization.
+- **Community health:** Open issues increased from 3,841 to 3,918 (+77). This is a material backlog increase for a security-critical gateway component.
+
 ### Daily monitoring update — 2026-07-09
 
 - **Latest release:** `v1.91.1` (2026-07-08): foregrounds Docker image signature verification with cosign and reiterates the release signing key; operators should verify images as part of supply-chain hygiene.
@@ -261,7 +266,7 @@ LiteLLM is the most popular LLM gateway/proxy, providing a unified OpenAI-compat
 
 ### 2. Gotchas of Using This Tool
 
-LiteLLM has 3,608 open issues — one of the highest in the ecosystem — reflecting the challenge of maintaining 100+ provider integrations. The 12 published security advisories mean production deployments must track CVEs. Configuration for all 100+ providers is complex, and provider API changes frequently break integrations. The proxy adds ~20-50ms latency overhead.
+LiteLLM has 3,918 open issues — one of the highest in the ecosystem — reflecting the challenge of maintaining 100+ provider integrations. The 12 published security advisories mean production deployments must track CVEs. Configuration for all 100+ providers is complex, and provider API changes frequently break integrations. The proxy adds ~20-50ms latency overhead.
 
 ### 3. Limitations
 

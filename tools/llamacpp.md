@@ -9,9 +9,9 @@
 - **Region**: Global
 - **Tier**: A
 - **First Triaged**: 2026-06-16
-- **Last Updated**: 2026-07-10
+- **Last Updated**: 2026-07-12
 
-> 119K+ stars; GGUF format; Metal/CUDA/Vulkan/ROCm; ARM, Raspberry Pi, WASM
+> 120K+ stars; GGUF format; Metal/CUDA/Vulkan/ROCm; ARM, Raspberry Pi, WASM
 
 ---
 
@@ -249,6 +249,10 @@ llama-server -hf ggml-org/gemma-3-1b-it-GGUF --port 8080
 
 ## Deep Analysis
 
+### Daily monitoring update — 2026-07-12
+
+- **Latest release:** `b9969` (2026-07-12): Vulkan routes large Adreno matmuls to medium tiles, fixing `llama-cli` failures on longer prompts with q4_0 quantized networks caused by insufficient shared memory; release artifacts were refreshed across macOS/iOS, Linux, Android, and Windows builds.
+
 ### Daily monitoring update — 2026-07-10
 
 - **Latest release:** `b9948` (2026-07-10): reduces temporary CUDA memory usage by processing `ggml_top_k()` and `ggml_argsort()` in smaller chunks, allocates temporary buffers once per loop, and refreshes release artifacts across macOS/iOS/Linux backends.
@@ -260,7 +264,7 @@ llama-server -hf ggml-org/gemma-3-1b-it-GGUF --port 8080
 
 ### 1. How Is This Tool Useful?
 
-llama.cpp is the most popular LLM inference engine by GitHub stars (119.8K+), providing C/C++ inference for GGUF-format models across CPU, GPU (CUDA, Metal, Vulkan, ROCm), and edge devices. It runs on everything from Raspberry Pi to multi-GPU servers and is the foundation for Ollama, LM Studio, and many other tools. The engine's broad hardware support and minimal dependencies make it the universal choice for local LLM inference.
+llama.cpp is the most popular LLM inference engine by GitHub stars (120.1K+), providing C/C++ inference for GGUF-format models across CPU, GPU (CUDA, Metal, Vulkan, ROCm), and edge devices. It runs on everything from Raspberry Pi to multi-GPU servers and is the foundation for Ollama, LM Studio, and many other tools. The engine's broad hardware support and minimal dependencies make it the universal choice for local LLM inference.
 
 ### 2. Gotchas of Using This Tool
 
@@ -291,7 +295,7 @@ llama.cpp uniquely provides universal LLM inference across the widest range of h
 | 1 | vLLM | 85K+ | Largest community, broadest hardware support |
 | 2 | SGLang | 30K | RadixAttention, best for RAG workloads |
 | 3 | TensorRT-LLM | 14K | Highest single-GPU throughput on NVIDIA |
-| 4 | llama.cpp | 119K | Best for CPU/consumer hardware |
+| 4 | llama.cpp | 120K | Best for CPU/consumer hardware |
 | 5 | Ollama | 175K | Easiest local deployment |
 
 *See [tools/README.md](README.md) for the full ranking table.*
