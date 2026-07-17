@@ -9,7 +9,7 @@
 - **Region**: Global
 - **Tier**: A
 - **First Triaged**: 2026-06-16
-- **Last Updated**: 2026-07-12
+- **Last Updated**: 2026-07-17
 
 > 30K+ stars; RadixAttention; 29% throughput advantage on RAG workloads
 
@@ -241,6 +241,11 @@ docker run --gpus all \
 
 ## Deep Analysis
 
+### Daily monitoring update — 2026-07-17
+
+- **Latest release:** `v0.5.15.post1` (2026-07-14): Patch release mostly for GLM 5.2: fixes DSA model launch on non-CUDA/HIP devices, CUDA 12 flashinfer dependencies, NaN outputs from flashinfer TensorRT-LLM FP4 MoE kernels on long inputs, and GLM 5.2 IndexShare behavior.
+- **Community health:** Open issues moved from 4,154 to 4,341 (+187). This is a material backlog increase; watch maintainer triage capacity, support load, and regression risk.
+
 ### Daily monitoring update — 2026-07-12
 
 - **Latest release:** `v0.5.15` (2026-07-10): production-tunes GLM-5.2 NVFP4 on Blackwell, turns Spec V2 on by default, adds IndexShare MTP and TopK V2 optimizations, introduces native Exa-backed `web_search`, expands model support (Hy3, HRM-Text, NVIDIA LocateAnything-3B, Unlimited-OCR, JoyEcho, Qwen3.6 NVFP4), and advances breakable CUDA Graph execution.
@@ -256,7 +261,7 @@ SGLang is a high-performance LLM serving framework featuring RadixAttention (aut
 
 ### 2. Gotchas of Using This Tool
 
-SGLang has 4,154 open issues — very high, reflecting rapid growth and broad feature development. RadixAttention benefits depend on workload characteristics — pure single-turn workloads see minimal benefit. The project moves fast with frequent API changes. Documentation sometimes lags behind features.
+SGLang has 4,341 open issues — very high, reflecting rapid growth and broad feature development. RadixAttention benefits depend on workload characteristics — pure single-turn workloads see minimal benefit. The project moves fast with frequent API changes. Documentation sometimes lags behind features.
 
 ### 3. Limitations
 
@@ -305,3 +310,7 @@ Best for RAG workloads and any serving scenario with shared prefixes (system pro
 ## License
 
 Content for this page is licensed CC BY 4.0 — share and adapt with attribution to **ArdurAI / Model Serving & Inference Engines Almanac**.
+
+---
+
+*Authored by Team Ardur · CC BY 4.0*

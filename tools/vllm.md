@@ -9,7 +9,7 @@
 - **Region**: Global
 - **Tier**: A
 - **First Triaged**: 2026-06-16
-- **Last Updated**: 2026-07-12
+- **Last Updated**: 2026-07-17
 
 > 86K+ stars; Model Runner V2; continuous batching; 200+ models; multi-GPU (NVIDIA, AMD, Intel, TPU)
 
@@ -231,6 +231,11 @@ outputs = llm.generate(["Hello world"], params)
 
 ## Deep Analysis
 
+### Daily monitoring update — 2026-07-17
+
+- **Latest release:** `v0.25.1` (2026-07-14): Patch release on v0.25.0 with targeted bug fixes, including avoiding blocked model launch when system FFmpeg is unavailable for TorchCodec.
+- **Community health:** Open issues moved from 5,705 to 5,790 (+85). This is a material backlog increase; watch maintainer triage capacity, support load, and regression risk.
+
 ### Daily monitoring update — 2026-07-12
 
 - **Latest release:** `v0.25.0` (2026-07-11): 558-commit release that makes Model Runner V2 the default for dense models, removes legacy PagedAttention, brings the Transformers backend to native-vLLM performance, adds new model support (LLaVA-OneVision-2, Unlimited OCR, MOSS-Transcribe-Diarize, openai/privacy-filter, Hy3, GLM-5/DeepSeek-V3.2, MiniMax-M3 improvements), introduces a unified streaming parser engine, and expands heterogeneous-vocabulary speculative decoding.
@@ -246,7 +251,7 @@ vLLM is the dominant open-source LLM inference engine with 86K+ GitHub stars, no
 
 ### 2. Gotchas of Using This Tool
 
-vLLM has 5,705 open issues — the highest raw count in the ecosystem, reflecting its massive user base and complex multi-hardware support. 30 published security advisories mean production deployments must track CVEs carefully. GPU memory leaks in model forward passes can occur with repeated batch inference. OOM during sampler warmup with large MoE models requires careful memory tuning.
+vLLM has 5,790 open issues — the highest raw count in the ecosystem, reflecting its massive user base and complex multi-hardware support. 30 published security advisories mean production deployments must track CVEs carefully. GPU memory leaks in model forward passes can occur with repeated batch inference. OOM during sampler warmup with large MoE models requires careful memory tuning.
 
 ### 3. Limitations
 
@@ -295,3 +300,7 @@ Best as the default LLM serving engine for most use cases. Use `vllm serve model
 ## License
 
 Content for this page is licensed CC BY 4.0 — share and adapt with attribution to **ArdurAI / Model Serving & Inference Engines Almanac**.
+
+---
+
+*Authored by Team Ardur · CC BY 4.0*

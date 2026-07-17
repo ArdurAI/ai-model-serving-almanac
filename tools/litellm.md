@@ -9,9 +9,9 @@
 - **Region**: US
 - **Tier**: A
 - **First Triaged**: 2026-06-16
-- **Last Updated**: 2026-07-12
+- **Last Updated**: 2026-07-17
 
-> 53K+ stars; 100+ providers; OpenAI-compatible proxy; YC W23
+> 53.8K+ stars; 100+ providers; OpenAI-compatible proxy; YC W23
 
 ---
 
@@ -250,6 +250,11 @@ docker-compose up db prometheus
 
 ## Deep Analysis
 
+### Daily monitoring update — 2026-07-17
+
+- **Adoption signal:** GitHub stars moved from 53,298 to 53,831 (+533). Track 53,831 as the current monitoring baseline because this crossed the >500 daily-change threshold.
+- **Community health:** Open issues moved from 3,918 to 3,981 (+63). This is a material backlog increase; watch maintainer triage capacity, support load, and regression risk.
+
 ### Daily monitoring update — 2026-07-12
 
 - **Latest release:** `v1.92.0` (2026-07-12): reiterates cosign verification for Docker image signatures and includes proxy fixes for team passthrough-route admin gating, Bedrock/Cohere embedding-type serialization, OpenAI responses cache-hit streaming, DeepSeek Anthropic-endpoint/tool sanitization, Bedrock batch metadata validation, plus Prometheus user budget metrics and test stabilization.
@@ -266,7 +271,7 @@ LiteLLM is the most popular LLM gateway/proxy, providing a unified OpenAI-compat
 
 ### 2. Gotchas of Using This Tool
 
-LiteLLM has 3,918 open issues — one of the highest in the ecosystem — reflecting the challenge of maintaining 100+ provider integrations. The 12 published security advisories mean production deployments must track CVEs. Configuration for all 100+ providers is complex, and provider API changes frequently break integrations. The proxy adds ~20-50ms latency overhead.
+LiteLLM has 3,981 open issues — one of the highest in the ecosystem — reflecting the challenge of maintaining 100+ provider integrations. The 12 published security advisories mean production deployments must track CVEs. Configuration for all 100+ providers is complex, and provider API changes frequently break integrations. The proxy adds ~20-50ms latency overhead.
 
 ### 3. Limitations
 
@@ -315,3 +320,7 @@ Best as an LLM gateway/proxy in front of any inference setup. Pair with vLLM or 
 ## License
 
 Content for this page is licensed CC BY 4.0 — share and adapt with attribution to **ArdurAI / Model Serving & Inference Engines Almanac**.
+
+---
+
+*Authored by Team Ardur · CC BY 4.0*

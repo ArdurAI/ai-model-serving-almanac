@@ -9,7 +9,7 @@
 - **Region**: Global
 - **Tier**: A
 - **First Triaged**: 2026-06-16
-- **Last Updated**: 2026-07-12
+- **Last Updated**: 2026-07-17
 
 > 120K+ stars; GGUF format; Metal/CUDA/Vulkan/ROCm; ARM, Raspberry Pi, WASM
 
@@ -249,6 +249,11 @@ llama-server -hf ggml-org/gemma-3-1b-it-GGUF --port 8080
 
 ## Deep Analysis
 
+### Daily monitoring update — 2026-07-17
+
+- **Latest release:** `b10054` (2026-07-17): Adds documentation for using OpenCL with Adreno 810 and ships updated platform binaries, including macOS/iOS artifacts.
+- **Adoption signal:** GitHub stars moved from 120,092 to 120,662 (+570). Track 120,662 as the current monitoring baseline because this crossed the >500 daily-change threshold.
+
 ### Daily monitoring update — 2026-07-12
 
 - **Latest release:** `b9969` (2026-07-12): Vulkan routes large Adreno matmuls to medium tiles, fixing `llama-cli` failures on longer prompts with q4_0 quantized networks caused by insufficient shared memory; release artifacts were refreshed across macOS/iOS, Linux, Android, and Windows builds.
@@ -264,7 +269,7 @@ llama-server -hf ggml-org/gemma-3-1b-it-GGUF --port 8080
 
 ### 1. How Is This Tool Useful?
 
-llama.cpp is the most popular LLM inference engine by GitHub stars (120.1K+), providing C/C++ inference for GGUF-format models across CPU, GPU (CUDA, Metal, Vulkan, ROCm), and edge devices. It runs on everything from Raspberry Pi to multi-GPU servers and is the foundation for Ollama, LM Studio, and many other tools. The engine's broad hardware support and minimal dependencies make it the universal choice for local LLM inference.
+llama.cpp is the most popular LLM inference engine by GitHub stars (120.7K+), providing C/C++ inference for GGUF-format models across CPU, GPU (CUDA, Metal, Vulkan, ROCm), and edge devices. It runs on everything from Raspberry Pi to multi-GPU servers and is the foundation for Ollama, LM Studio, and many other tools. The engine's broad hardware support and minimal dependencies make it the universal choice for local LLM inference.
 
 ### 2. Gotchas of Using This Tool
 
@@ -317,3 +322,7 @@ Best for local LLM inference on any hardware. For production multi-user serving,
 ## License
 
 Content for this page is licensed CC BY 4.0 — share and adapt with attribution to **ArdurAI / Model Serving & Inference Engines Almanac**.
+
+---
+
+*Authored by Team Ardur · CC BY 4.0*

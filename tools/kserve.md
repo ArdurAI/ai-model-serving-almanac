@@ -9,7 +9,7 @@
 - **Region**: Global
 - **Tier**: A
 - **First Triaged**: 2026-06-16
-- **Last Updated**: 2026-07-09
+- **Last Updated**: 2026-07-17
 
 > CNCF Incubating; InferenceService CRD; scale-to-zero; canary; vLLM/TGI runtimes
 
@@ -238,6 +238,10 @@ EOF
 
 ## Deep Analysis
 
+### Daily monitoring update — 2026-07-17
+
+- **Community health:** Open issues moved from 535 to 449 (-86). This is a material backlog reduction; positive signal, but verify whether closures reflect fixes versus stale-issue pruning.
+
 ### Daily monitoring update — 2026-07-09
 
 - **Community health:** Open issues decreased from 636 to 585 (-51). This is a positive backlog-reduction signal.
@@ -248,7 +252,7 @@ KServe is a CNCF Incubating project that standardizes model serving on Kubernete
 
 ### 2. Gotchas of Using This Tool
 
-KServe has 633 open issues, many related to the complexity of Kubernetes-native serving. The CRD-based approach adds abstraction layers that can make debugging harder. v2 (the latest architecture) introduces significant changes from v1, and migration can be non-trivial. Requires solid Kubernetes knowledge.
+KServe has 449 open issues, many related to the complexity of Kubernetes-native serving. The CRD-based approach adds abstraction layers that can make debugging harder. v2 (the latest architecture) introduces significant changes from v1, and migration can be non-trivial. Requires solid Kubernetes knowledge.
 
 ### 3. Limitations
 
@@ -297,3 +301,7 @@ Best for enterprise teams running Kubernetes who need standardized, multi-runtim
 ## License
 
 Content for this page is licensed CC BY 4.0 — share and adapt with attribution to **ArdurAI / Model Serving & Inference Engines Almanac**.
+
+---
+
+*Authored by Team Ardur · CC BY 4.0*
